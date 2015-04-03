@@ -1,0 +1,10 @@
+{
+  "test1": [
+    { "_id": "doc1", "foo": "bar" },
+    { "_id": "doc2", "foo": "bar" }
+  ],
+  "test2": [
+    { "_id": "doc4", "foo": "bar" }
+  ],
+  "test3": []
+}

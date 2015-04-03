@@ -1,0 +1,34 @@
+{
+  "name": "photolib",
+  "version": "1.0.0",
+  "description": "home photo library",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "debug": "^2.1.3",
+    "express": "^4.12.3",
+    "jade": "^1.9.2",
+    "morgan": "^1.5.2",
+    "nano": "^6.1.2",
+    "nib": "^1.1.0",
+    "serve-favicon": "^2.2.0",
+    "stylus": "^0.50.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodeunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grobakh/photolib.git"
+  },
+  "keywords": [
+    "photo photos photo-gallery photo-library gallery"
+  ],
+  "author": "grobakh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grobakh/photolib/issues"
+  },
+  "homepage": "https://github.com/grobakh/photolib"
+}

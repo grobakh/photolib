@@ -1,9 +1,9 @@
 Home photo libarary
 
-Preparations:
-1. install Node
-1. install CouchDB
-1. checkout
-1. go to project root and run "npm install"
+How to run project:
 
-Run server with "npm start"
+1. install Node
+2. install CouchDB
+3. checkout https://github.com/grobakh/photolib.git
+4. go to project root and run "npm install"
+5. Run server with "npm start"

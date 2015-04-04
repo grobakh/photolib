@@ -17,10 +17,10 @@ body {
   background: #e2e2e2;
 }
 .content {
-  width: 970px;
+  width: 980px;
   height: 100%;
   background: #fff;
-  padding: 12px 24px 0 24px;
+  padding: 10px 20px 0 20px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -75,7 +75,7 @@ h1 {
   text-decoration: none;
 }
 .navigation .crump a::after {
-  content: " >>";
+  content: " →";
 }
 .actionBlock {
   padding-top: 20px;

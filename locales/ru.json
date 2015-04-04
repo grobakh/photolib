@@ -1,5 +1,6 @@
 {
 	"IndexTitle": "Главная страница",
 	"AdminDashboard": "Админка",
-	"SignIn": "Войти"
+	"SignIn": "Войти",
+	"SignOut": "Выйти"
 }

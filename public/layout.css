@@ -8,6 +8,9 @@ html {
 }
 body {
   font: 14px Verdana, Geneva, sans-serif;
+  color: #000;
+  font-weight: normal;
+  text-decoration: none;
   height: 100%;
   color: #000;
   background: #e2e2e2;
@@ -21,8 +24,10 @@ body {
   margin-left: auto;
 }
 h1 {
-  font-size: 36px;
+  font: 36px Verdana, Geneva, sans-serif;
+  color: #000;
   font-weight: normal;
+  text-decoration: none;
   padding: 1px 0 6px 0;
   margin-bottom: 20px;
 }
@@ -30,13 +35,17 @@ h1 {
   margin-bottom: 40px;
 }
 .catalog a {
+  font: 26px Verdana, Geneva, sans-serif;
   color: #666;
-  font-size: 26px;
+  font-weight: normal;
+  text-decoration: none;
   text-decoration: none;
 }
 .footer {
+  font: 13px Verdana, Geneva, sans-serif;
   color: #949494;
-  font-size: 13px;
+  font-weight: normal;
+  text-decoration: none;
   border-top: 1px solid #ccc;
   margin: 15px auto 0;
   padding-top: 30px;
@@ -46,8 +55,9 @@ h1 {
   margin-bottom: 5px;
 }
 .footer a {
+  font: 11px Verdana, Geneva, sans-serif;
   color: #6da3bd;
-  font-size: 11px;
+  font-weight: normal;
   text-decoration: none;
 }
 .navigation {
@@ -55,7 +65,42 @@ h1 {
   height: 32;
 }
 .navigation a {
+  font: 26px Verdana, Geneva, sans-serif;
   color: #666;
-  font-size: 26px;
+  font-weight: normal;
   text-decoration: none;
+}
+.action {
+  font: 12px Verdana, Geneva, sans-serif;
+  color: #282828;
+  font-weight: normal;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px 1px #fff;
+  -moz-box-shadow: inset 0 1px 1px #fff;
+  box-shadow: inset 0 1px 1px #fff;
+  border: 1px solid #d9d8d8;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 26px;
+  vertical-align: middle;
+  padding: 0 10px;
+  background-color: #eee;
+  transition-duration: 0.2s;
+}
+.action:hover {
+  background-color: #fcfcfc;
+}
+.action:active {
+  background-color: #e1e1e1;
+  -webkit-box-shadow: inset 0 1px 1px #d9d8d8;
+  -moz-box-shadow: inset 0 1px 1px #d9d8d8;
+  box-shadow: inset 0 1px 1px #d9d8d8;
 }

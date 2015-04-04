@@ -1,3 +1,8 @@
+@import "font"
+@import "border-radius"
+@import "box-shadow"
+@import "user-select"
+
 *
   margin: 0
   padding: 0
@@ -7,8 +12,8 @@ html
   height: 100%
 
 body
-  font: 14px Verdana, Geneva, sans-serif
-  height:100%
+  font(14px, black)
+  height: 100%
   color: black
   background: #e2e2e2
 
@@ -22,21 +27,18 @@ body
   margin-left: auto
 
 h1
-  font-size: 36px
-  font-weight: normal
+  font(36px, black)
   padding: 1px 0 6px 0
   margin-bottom: 20px
 
 .catalog
   margin-bottom: 40px
   a
-    color: #666
-    font-size: 26px
+    font(26px, #666)
     text-decoration: none
 
 .footer
-  color: #949494
-  font-size: 13px
+  font(13px, #949494)
   border-top: 1px solid #ccc
   margin: 15px auto 0
   padding-top: 30px
@@ -44,14 +46,34 @@ h1
   dd
     margin-bottom: 5px;
   a
-    color: #6da3bd
-    font-size: 11px
-    text-decoration: none
+    font(11px, #6da3bd)
 
 .navigation
   text-align: center;
   height: 32;
   a
-    color: #666
-    font-size: 26px
-    text-decoration: none
+    font(26px, #666)
+
+.action
+
+  font(12px, #282828)
+  user-select-none()
+
+  border-radius(6px)
+  box-shadow-inset(0, 1px, 1px, #fff)
+  border: 1px solid #d9d8d8;
+
+  cursor: pointer
+  display: inline-block
+  line-height: 26px
+  vertical-align: middle
+
+  padding: 0 10px
+  background-color: #eee;
+  transition-duration: .2s;
+
+  &:hover
+    background-color: #fcfcfc;
+  &:active
+    background-color: #e1e1e1;
+    box-shadow-inset(0, 1px, 1px, #d9d8d8)

@@ -25,7 +25,7 @@ h1 {
   font-size: 36px;
   font-weight: normal;
   padding: 1px 0 6px 0;
-  margin: 0 0 20px 0;
+  margin-bottom: 20px;
 }
 .catalog {
   margin-bottom: 40px;
@@ -42,6 +42,9 @@ h1 {
   margin: 15px auto 0;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+.footer dd {
+  margin-bottom: 5px;
 }
 .footer a {
   color: #6da3bd;

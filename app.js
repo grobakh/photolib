@@ -3,23 +3,37 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 var stylus = require('stylus');
 var nib = require('nib');
+var i18n = require('i18n');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+
+// i18n configure
+i18n.configure({
+    locales: ['ru'],
+    defaultLocale: 'ru',
+    cookie: 'photolib-yellowfish',
+    directory: __dirname + '/locales'
+});
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+// app.disable('etag');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
+app.use(cookieParser());
+app.use(i18n.init);
 
 function compile(str, path) {
     return stylus(str)
@@ -69,6 +83,5 @@ app.use(function (err, req, res) {
         error: {}
     });
 });
-
 
 module.exports = app;

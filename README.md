@@ -1,4 +1,4 @@
-Home photo libarary
+#Home photo libarary
 
 How to run project:
 

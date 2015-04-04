@@ -5,6 +5,7 @@
 }
 html {
   height: 100%;
+  background: #e2e2e2;
 }
 body {
   font: 14px Verdana, Geneva, sans-serif;
@@ -23,13 +24,15 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+.menu {
+  margin-bottom: 20px;
+}
 h1 {
   font: 36px Verdana, Geneva, sans-serif;
   color: #000;
   font-weight: normal;
   text-decoration: none;
   padding: 1px 0 6px 0;
-  margin-bottom: 20px;
 }
 .catalog {
   margin-bottom: 40px;
@@ -60,15 +63,23 @@ h1 {
   font-weight: normal;
   text-decoration: none;
 }
-.navigation {
-  text-align: center;
-  height: 32;
+.navigation .crump {
+  display: inline-block;
+  padding: 5px 15px 5px 15px;
+  background: #eaecea;
 }
-.navigation a {
-  font: 26px Verdana, Geneva, sans-serif;
+.navigation .crump a {
+  font: 16px Verdana, Geneva, sans-serif;
   color: #666;
   font-weight: normal;
   text-decoration: none;
+}
+.navigation .crump a::after {
+  content: " >>";
+}
+.actionBlock {
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 .action {
   font: 12px Verdana, Geneva, sans-serif;
@@ -93,7 +104,6 @@ h1 {
   vertical-align: middle;
   padding: 0 10px;
   background-color: #eee;
-  transition-duration: 0.2s;
 }
 .action:hover {
   background-color: #fcfcfc;

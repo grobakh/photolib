@@ -10,6 +10,7 @@
 
 html
   height: 100%
+  background: #e2e2e2
 
 body
   font(14px, black)
@@ -26,10 +27,12 @@ body
   margin-right: auto
   margin-left: auto
 
+.menu
+  margin-bottom: 20px
+
 h1
   font(36px, black)
   padding: 1px 0 6px 0
-  margin-bottom: 20px
 
 .catalog
   margin-bottom: 40px
@@ -49,10 +52,18 @@ h1
     font(11px, #6da3bd)
 
 .navigation
-  text-align: center;
-  height: 32;
-  a
-    font(26px, #666)
+  .crump
+    display: inline-block
+    padding: 5px 15px 5px 15px
+    background: #eaecea
+    a
+      font(16px, #666)
+      &::after
+        content: " >>"
+
+.actionBlock
+  padding-top: 20px
+  padding-bottom: 10px
 
 .action
 
@@ -70,7 +81,6 @@ h1
 
   padding: 0 10px
   background-color: #eee;
-  transition-duration: .2s;
 
   &:hover
     background-color: #fcfcfc;

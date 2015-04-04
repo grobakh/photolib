@@ -1,12 +1,12 @@
 extends layout
 
 block navigator
-    .navigation
-        span
-            a(href="/")= __("ToIndex")
+  .navigation
+    .crump
+      a(href="/")= __("ToIndex")
 
 block content
-    .actionBlock
-        button.action= __("UploadNew")
-        |&nbsp;
-        button.action= __("EditOld")
+  .actionBlock
+    button.action= __("UploadAndEdit")
+  .actionBlock
+    button.action= __("ManageAlbums")

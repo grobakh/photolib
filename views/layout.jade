@@ -4,9 +4,10 @@ meta(name="viewport" content="width=device-width, initial-scale=1")
 
 html
     head
-        title= __("IndexTitle")
+        title= title
         link(rel='stylesheet', href='/layout.css')
     body
         .content
-            h1= __("IndexTitle")
+            block navigator
+            h1= title
             block content

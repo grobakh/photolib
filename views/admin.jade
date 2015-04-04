@@ -1,0 +1,11 @@
+extends layout
+
+block navigator
+    .navigation
+        span
+            a(href="/")= __("ToIndex")
+
+block content
+    .actionBlock
+        button.action= __("UploadNew")
+        button.action= __("EditOld")

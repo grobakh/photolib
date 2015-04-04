@@ -1,6 +1,7 @@
 {
-	"IndexTitle": "Главная страница",
-	"AdminDashboard": "Админка",
-	"SignIn": "Войти",
-	"SignOut": "Выйти"
+  "IndexTitle": "Главная страница",
+  "AdminDashboard": "Админка",
+  "ToIndex": "На главную",
+  "UploadNew": "Загрузить новые фото",
+  "EditOld": "Отредактировать старые фото"
 }

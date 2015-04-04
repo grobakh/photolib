@@ -7,9 +7,10 @@ var cookieParser = require('cookie-parser');
 var stylus = require('stylus');
 var nib = require('nib');
 var i18n = require('i18n');
+var basicAuth = require('basic-auth-connect');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var adminDashboard = require('./routes/admin');
 
 // i18n configure
 i18n.configure({
@@ -51,7 +52,9 @@ app.use(stylus.middleware(
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+
+app.use('/admin', basicAuth('admin', 'admin'));
+app.use('/admin', adminDashboard);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

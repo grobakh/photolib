@@ -50,3 +50,12 @@ h1 {
   font-size: 11px;
   text-decoration: none;
 }
+.navigation {
+  text-align: center;
+  height: 32;
+}
+.navigation a {
+  color: #666;
+  font-size: 26px;
+  text-decoration: none;
+}

@@ -1,7 +1,13 @@
 extends layout
 
 block content
-    a Фото по поездкам
-    a Избранные фото Люды
-    a Избранные фото Вовы
-    a Админка
+
+    .catalog
+        a Фото по поездкам
+    .catalog
+        a Избранные фото Люды
+    .catalog
+        a Избранные фото Вовы
+
+    .footer
+        a(href="/admin")= __("AdminDashboard")

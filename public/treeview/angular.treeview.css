@@ -1,0 +1,50 @@
+div[data-angular-treeview] li {
+  font: 14px Verdana, Geneva, sans-serif;
+  color: #666;
+  font-weight: normal;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+}
+div[data-angular-treeview] li :hover {
+  color: #a3a3a3;
+}
+div[data-tree-model] ul {
+  list-style: none;
+  border: none;
+  overflow: hidden;
+}
+div[data-tree-model] li {
+  position: relative;
+  padding: 0 0 0 20px;
+  line-height: 20px;
+}
+div[data-tree-model] li .expanded {
+  padding: 0 10px;
+  background-image: url("folder.png");
+  background-repeat: no-repeat;
+}
+div[data-tree-model] li .collapsed {
+  padding: 0 10px;
+  background-image: url("folder-closed.png");
+  background-repeat: no-repeat;
+}
+div[data-tree-model] li .normal {
+  padding: 0 10px;
+  background-image: url("album.png");
+  background-repeat: no-repeat;
+}
+div[data-tree-model] li i,
+div[data-tree-model] li span {
+  cursor: pointer;
+}
+div[data-tree-model] li .selected {
+  color: #000;
+  background-color: #d3e2f0;
+}
+div[data-tree-model] li .selected:hover {
+  color: #000;
+}

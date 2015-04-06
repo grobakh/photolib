@@ -34,15 +34,17 @@ h1 {
   text-decoration: none;
   padding: 1px 0 6px 0;
 }
-.catalog {
-  margin-bottom: 40px;
+.largeLink {
+  margin-bottom: 20px;
 }
-.catalog a {
+.largeLink a {
   font: 26px Verdana, Geneva, sans-serif;
   color: #666;
   font-weight: normal;
   text-decoration: none;
-  text-decoration: none;
+}
+.largeLink a:hover {
+  color: #a3a3a3;
 }
 .footer {
   font: 13px Verdana, Geneva, sans-serif;
@@ -50,12 +52,12 @@ h1 {
   font-weight: normal;
   text-decoration: none;
   border-top: 1px solid #ccc;
-  margin: 15px auto 0;
+  margin: 20px auto 0;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 .footer dd {
-  margin-bottom: 5px;
+  margin-bottom: 10px/2;
 }
 .footer a {
   font: 11px Verdana, Geneva, sans-serif;
@@ -65,7 +67,8 @@ h1 {
 }
 .navigation .crump {
   display: inline-block;
-  padding: 5px 15px 5px 15px;
+  padding: 5px 10px 5px 10px;
+  margin-right: 4px;
   background: #eaecea;
 }
 .navigation .crump a {
@@ -73,6 +76,9 @@ h1 {
   color: #666;
   font-weight: normal;
   text-decoration: none;
+}
+.navigation .crump a:hover {
+  color: #a3a3a3;
 }
 .navigation .crump a::after {
   content: " →";

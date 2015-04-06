@@ -1,0 +1,22 @@
+extends layout
+
+block styles
+  link(rel="stylesheet" href="/treeview/angular.treeview.css" type="text/css")
+block scripts
+  script(type="text/javascript" src="/angular/angular.min.js")
+  script(type="text/javascript" src="/treeview/angular.treeview.js")
+  script(type="text/javascript" src="/admin/albumTreeApp.js")
+
+block favicon
+  link(rel="shortcut icon" href="/red-favicon.png?v=1" type="image/x-icon")
+
+block navigator
+  .navigation
+    .crump
+      a(href="/")= __("toIndex")
+    .crump
+      a(href="/admin")= __("adminDashboard")
+
+block content
+  div(ng-app="albumTreeApp"): div(ng-controller="treeController")
+      div(data-angular-treeview="true" data-tree-id="albumTree" data-tree-model="albums")

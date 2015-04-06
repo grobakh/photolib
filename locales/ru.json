@@ -1,7 +1,8 @@
 {
-  "IndexTitle": "Главная страница",
-  "AdminDashboard": "Админка",
-  "ToIndex": "На главную",
-  "UploadAndEdit": "Загрузка и редактирование фото",
-  "ManageAlbums": "Управление папками и альбомами"
+	"indexTitle": "Главная страница",
+	"adminDashboard": "Админка",
+	"toIndex": "На главную",
+	"uploadAndEdit": "Загрузка и редактирование фото",
+	"manageAlbums": "Управление папками и альбомами",
+	"IndexTitle": "IndexTitle"
 }

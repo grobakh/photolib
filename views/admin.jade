@@ -6,10 +6,10 @@ block favicon
 block navigator
   .navigation
     .crump
-      a(href="/")= __("ToIndex")
+      a(href="/")= __("toIndex")
 
 block content
-  .actionBlock
-    button.action= __("UploadAndEdit")
-  .actionBlock
-    button.action= __("ManageAlbums")
+  .largeLink
+    a(href="/admin/uploadAndEdit")= __("uploadAndEdit")
+  .largeLink
+    a(href="/admin/manageAlbums")= __("manageAlbums")

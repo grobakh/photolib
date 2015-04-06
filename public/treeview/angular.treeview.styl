@@ -1,0 +1,50 @@
+@import "../mixins"
+
+div[data-angular-treeview] li
+  font(14px, linkColor)
+  user-select-none()
+  :hover
+    color hoverLinkColor
+
+
+div[data-tree-model] ul
+  list-style none
+  border none
+  overflow hidden
+
+
+div[data-tree-model] li
+  position relative
+  padding 0 0 0 gap
+  line-height line * 2
+
+
+div[data-tree-model] li .expanded
+  padding 0 line
+  background-image url("folder.png")
+  background-repeat no-repeat
+
+
+div[data-tree-model] li .collapsed
+  padding 0 line
+  background-image url("folder-closed.png")
+  background-repeat no-repeat
+
+
+div[data-tree-model] li .normal
+  padding 0 line
+  background-image url("album.png")
+  background-repeat no-repeat
+
+
+div[data-tree-model] li i, div[data-tree-model] li span
+  cursor pointer
+
+div[data-tree-model] li .selected
+  color selectedColor
+  background-color selectionColor
+  &:hover
+    color selectedColor
+
+
+

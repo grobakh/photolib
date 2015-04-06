@@ -2,3 +2,29 @@ line = 10px
 gap = 2 * line
 unit = 6 * line
 content = 12 * unit + 13 * gap
+
+container()
+  width content
+  margin-left auto
+  margin-right auto
+
+grid12(n)
+  width (n * unit + (n - 1) * gap)
+  +cache()
+    display inline
+    float left
+    position relative
+    margin-left (gap / 2)
+    margin-right (gap / 2)
+
+shift12(n)
+  padding-left (n * unit + n * gap)
+
+for c in 1..12
+  .grid12_{c}
+    grid12(c)
+
+for c in 1..11
+  .shift12_{c}
+    shift12(c)
+

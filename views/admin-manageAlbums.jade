@@ -18,5 +18,8 @@ block navigator
       a(href="/admin")= __("adminDashboard")
 
 block content
+  div
+
+
   div(ng-app="albumTreeApp"): div(ng-controller="treeController")
       div(data-angular-treeview="true" data-tree-id="albumTree" data-tree-model="albums")

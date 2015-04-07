@@ -10,16 +10,19 @@ html
   background #e2e2e2
 
 body
-  font(14px, black)
+  defaultFont()
   height 100%
   color black
   background #e2e2e2
 
-.content
+.decorator
+  decorator(line, gap / 2)
+  background white
+  height 100%
+
+.container
   container()
   height 100%
-  background white
-  padding line gap 0 gap
 
 .menu
   margin-bottom line*2
@@ -27,6 +30,13 @@ body
 h1
   font(36px, black)
   padding 1px 0 6px 0
+
+.link
+  margin-bottom line
+  a
+    font(14px, linkColor)
+    &:hover
+      color hoverLinkColor
 
 .largeLink
   margin-bottom line*2
@@ -38,7 +48,7 @@ h1
 .footer
   font(13px, #949494)
   border-top 1px solid #ccc
-  margin line*2 auto 0
+  margin-top line*2
   padding-top line*3
   padding-bottom line*3
   dd
@@ -50,37 +60,43 @@ h1
   .crump
     display inline-block
     padding (line/2) (gap/2) (line/2) (gap/2)
-    margin-right (gap/5)
     background #eaecea
     a
-      font(16px, linkColor)
+      font(14px, linkColor)
       &:hover
         color hoverLinkColor
       &::after
         content " →"
 
 .actionBlock
-  padding-top line*2
   padding-bottom line
 
-.action
-  font(12px, #282828)
-  user-select-none()
+action(baseColor)
+  darkColor = lightness(baseColor, lightness(baseColor) - 5)
+  darkestColor = lightness(baseColor, lightness(baseColor) - 10)
+  lightColor = lightness(baseColor, lightness(baseColor) + 5)
+  +cache()
+    defaultFont()
+    user-select-none()
+    border-radius(6px)
+    cursor pointer
+    display inline-block
+    line-height 26px
+    vertical-align middle
+    padding 0 (gap/2)
 
-  border-radius(6px)
-  box-shadow-inset(0, 1px, 1px, #fff)
-  border 1px solid #d9d8d8;
-
-  cursor pointer
-  display inline-block
-  line-height 26px
-  vertical-align middle
-
-  padding 0 (gap/2)
-  background-color #eee;
+  background-color baseColor
+  border 1px solid darkestColor
+  box-shadow-inset(0, 1px, 1px, lightColor)
 
   &:hover
-    background-color #fcfcfc;
+    background-color lightColor
   &:active
-    background-color #e1e1e1;
-    box-shadow-inset(0, 1px, 1px, #d9d8d8)
+    background-color darkColor
+    box-shadow-inset(0, 1px, 1px, darkestColor)
+
+.action
+  action(actionColor)
+
+.global-action
+  action(globalActionColor)

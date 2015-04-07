@@ -14,10 +14,11 @@ var adminDashboard = require('./routes/admin');
 
 // i18n configure
 i18n.configure({
-    locales: ['ru'],
-    defaultLocale: 'ru',
-    cookie: 'photolib-yellowfish',
-    directory: __dirname + '/locales'
+  locales: ['ru'],
+  defaultLocale: 'ru',
+  cookie: 'photolib-yellowfish',
+  directory: __dirname + '/locales',
+  updateFiles: false
 });
 
 var app = express();
@@ -36,16 +37,16 @@ app.use(cookieParser());
 app.use(i18n.init);
 
 function compile(str, path) {
-    return stylus(str)
-        .set('filename', path)
-        .use(nib());
+  return stylus(str)
+    .set('filename', path)
+    .use(nib());
 }
 
 app.use(stylus.middleware(
-    {
-        src: path.join(__dirname, 'public'),
-        compile: compile
-    }
+  {
+    src: path.join(__dirname, 'public'),
+    compile: compile
+  }
 ));
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -53,15 +54,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 
 /*app.use(basicAuth(function(user, pass, fn){
-    User.authenticate({ user: user, pass: pass }, fn);
-}))*/
+ User.authenticate({ user: user, pass: pass }, fn);
+ }))*/
 app.use('/admin', adminDashboard);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
 });
 
 // error handlers
@@ -69,23 +70,23 @@ app.use(function (req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-    app.use(function (err, req, res) {
-        res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: err
-        });
+  app.use(function (err, req, res) {
+    res.status(err.status || 500);
+    res.render('error', {
+      message: err.message,
+      error: err
     });
+  });
 }
 
 // production error handler
 // no stacktraces leaked to user
 app.use(function (err, req, res) {
-    res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: {}
-    });
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    error: {}
+  });
 });
 
 module.exports = app;

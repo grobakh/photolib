@@ -1,3 +1,4 @@
+include ./mixins.jade
 doctype html
 
 html
@@ -11,8 +12,13 @@ html
     block styles
     block scripts
   body
-    .content
-      .menu
-        h1= title
-        block navigator
-      block content
+    .decorator
+      .container
+        .menu.grid12_12
+          h1= title
+          block navigator
+
+        block content
+
+        .footer.grid12_12
+          block footer

@@ -1,8 +1,13 @@
 {
-	"indexTitle": "Главная страница",
-	"adminDashboard": "Админка",
-	"toIndex": "На главную",
-	"uploadAndEdit": "Загрузка и редактирование фото",
-	"manageAlbums": "Управление папками и альбомами",
-	"IndexTitle": "IndexTitle"
+  "indexTitle": "Главная страница",
+  "adminDashboard": "Админка",
+  "toIndex": "На главную",
+  "uploadAndEdit": "Загрузка и редактирование фото",
+  "manageAlbums": "Управление папками и альбомами",
+  "cancel": "Отмена",
+  "saveChanges": "Сохранить изменения",
+  "saveChangesSuccessful": "Изменения успешно сохранены.",
+  "cancelQuestion": "Отменить?",
+  "continueManageAlbums": "Продолжить управление папками и альбомами",
+  "saveChangesInfo": "Удалено %s альбома, %s фото перенесено в \"Фото без альбома\"."
 }

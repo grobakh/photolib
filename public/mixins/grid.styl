@@ -1,12 +1,18 @@
 line = 10px
 gap = 2 * line
 unit = 6 * line
-content = 12 * unit + 13 * gap
+content = 12 * unit + 12 * gap
 
 container()
   width content
   margin-left auto
   margin-right auto
+
+decorator(y, x)
+  width content + 2 * x
+  margin-left auto
+  margin-right auto
+  padding y x
 
 grid12(n)
   width (n * unit + (n - 1) * gap)

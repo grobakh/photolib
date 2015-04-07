@@ -2,14 +2,15 @@ extends layout
 
 block content
 
-  .largeLink
-    a Фото по поездкам
-  .largeLink
-    a Избранные фото Люды
-  .largeLink
-    a Избранные фото Вовы
+  .catalog.grid12_12
+    .largeLink
+      a Фото по поездкам
+    .largeLink
+      a Избранные фото Люды
+    .largeLink
+      a Избранные фото Вовы
 
-  .footer
-    dl
-      dd
-        a(href="/admin")= __("adminDashboard")
+block footer
+  dl
+    dd
+      a(href="/admin")= __("adminDashboard")

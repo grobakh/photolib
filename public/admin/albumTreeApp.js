@@ -9,6 +9,7 @@
         {
           "label": "User",
           "id": "324324234453543",
+          "isFolder" : true,
           "children": [
             {"label": "subUser1", "id": "456234234765", "children": []}
           ]
@@ -16,7 +17,7 @@
 
         {"label": "Admin", "id": "6786745645", "children": [], isFolder: true},
 
-        {"label": "Guest", "id": "34578678455645", "children": [], isFolder: false}
+        {"label": "Guest", "id": "34578678455645", "children": []}
       ];
 
       $scope.saveChanges = function () {

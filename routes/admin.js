@@ -17,6 +17,7 @@ router.post('/manageAlbums/saveChanges', function (req, res) {
 
 router.get('/manageAlbums/success', function (req, res) {
   res.render('admin-manageAlbums-success', {
+    title: res.__("manageAlbums"),
     albumsRemoved: req.param('albumsRemoved'),
     photosRecovery: req.param('photosRecovery')
   });

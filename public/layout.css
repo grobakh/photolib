@@ -135,6 +135,7 @@ h1 {
   color: #666;
   font-weight: normal;
   text-decoration: none;
+  cursor: pointer;
 }
 .link a:hover {
   color: #a3a3a3;
@@ -147,6 +148,7 @@ h1 {
   color: #666;
   font-weight: normal;
   text-decoration: none;
+  cursor: pointer;
 }
 .largeLink a:hover {
   color: #a3a3a3;

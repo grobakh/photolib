@@ -1,10 +1,18 @@
 {
-  "db1": [
-    { "_id": "doc1", "foo": "bar" },
-    { "_id": "doc2", "foo": "bar" }
-  ],
-  "db2": [
-    { "_id": "doc4", "foo": "bar" }
-  ],
-  "db3": []
+  "albums": [
+    {
+      "_id": "albumTree",
+      "tree": [
+        {
+          "_id": "1",
+          "label": "bar"
+        },
+        {
+          "_id": "2",
+          "label": "foo",
+          "isFolder": true
+        }
+      ]
+    }
+  ]
 }

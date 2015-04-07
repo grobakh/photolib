@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var stylus = require('stylus');
 var nib = require('nib');
 var i18n = require('i18n');
-var basicAuth = require('basic-auth-connect');
+//var basicAuth = require('basic-auth-connect');
 
 var routes = require('./routes/index');
 var adminDashboard = require('./routes/admin');

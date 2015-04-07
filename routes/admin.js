@@ -11,6 +11,7 @@ router.get('/manageAlbums', function (req, res) {
 });
 
 router.post('/manageAlbums/saveChanges', function (req, res) {
+  debug(req.param('albums'));
   res.send({albumsRemoved: 8, photosRecovery: 10});
 });
 

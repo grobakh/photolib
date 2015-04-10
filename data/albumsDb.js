@@ -5,6 +5,7 @@ debug("start albumsDb");
 
 module.exports = function (prefix) {
   debug("module constructor function");
+  prefix = prefix || "";
 
   var albumsDb = db.use(prefix + "albums");
 

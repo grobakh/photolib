@@ -16,6 +16,6 @@ block content
     div= __("saveChangesSuccessful")
     div= __("saveChangesInfo", albumsRemoved, photosRecovery)
     .link
-      a(href="/admin/manageAlbums?cancel")= __("cancelQuestion")
+      a(href="/admin/manageAlbums/cancel/#{rev}")= __("cancelQuestion")
     .largeLink
       a(href="/admin/manageAlbums")= __("continueManageAlbums")

@@ -4,6 +4,7 @@ var nano = require('nano')('http://localhost:5984');
 var data = require('./testpenter.json');
 var couchpenter = new (require('couchpenter'))("http://localhost:5984",
   {setupFile: 'test/testpenter.json', prefix: prefix});
+var debug = require('debug')('photolib:test');
 
 
 exports["test CouchDB Local Connection"] = {
@@ -23,6 +24,7 @@ exports["test CouchDB Local Connection"] = {
   //      throw error;
   //    }
   //
+  //    debug("tearDown");
   //    callback();
   //  });
   //},
@@ -44,16 +46,73 @@ exports["test CouchDB Local Connection"] = {
   },
 
   "connect to albums": function (test) {
-    albumsDb.readTree(function (data) {
+    albumsDb.readTree(function (err) {
+      throw new Error(err);
+    }, function (data) {
       test.ok(data);
       test.done();
     });
   },
 
   "update albums": function (test) {
-    albumsDb.readTree(function (data) {
-      albumsDb.saveTree(data, function () {
+    albumsDb.readTree(function (err) {
+      throw new Error(err);
+    }, function (data) {
+      albumsDb.saveTree(data, function (err) {
+        throw new Error(err);
+      }, function (rev) {
+        test.ok(rev);
         test.done();
+      });
+    });
+  },
+
+  "undo": function (test) {
+    albumsDb.readTree(function (err) {
+      throw new Error(err);
+    }, function (data) {
+      data[0].label = "save1";
+      albumsDb.saveTree(data, function (err) {
+        throw new Error(err);
+      }, function (rev) {
+        albumsDb.undo(rev, function (err) {
+          throw new Error(err);
+        }, function (rev) {
+          albumsDb.readTree(function (err) {
+            throw new Error(err);
+          }, function (data) {
+            test.equals(data[0].label, "bar");
+            test.done();
+          });
+        });
+      });
+    });
+  },
+
+  "no undo": function (test) {
+    albumsDb.readTree(function (err) {
+      throw new Error(err);
+    }, function (data) {
+      data[0].label = "save_no_1";
+      albumsDb.saveTree(data, function (err) {
+        throw new Error(err);
+      }, function (rev1) {
+        data[0].label = "save_no_2";
+        albumsDb.saveTree(data, function (err) {
+          throw new Error(err);
+        }, function (rev2) {
+          albumsDb.undo(rev1, function (err) {
+            test.equal(err, "PL_CANCEL_NOT_LATEST_REVISION");
+
+            albumsDb.readTree(function (err) {
+              throw new Error(err);
+            }, function (data) {
+              test.equals(data[0].label, "save_no_2");
+              test.done();
+            });
+          }, function (rev) {
+          });
+        });
       });
     });
   }

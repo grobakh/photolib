@@ -32,8 +32,8 @@ exports["test CouchDB Local Connection"] = {
   "test db data": function (test) {
     test.ok(data);
     test.ok(data.albums);
-    test.ok(data.albums[0]);
-    test.equal(data.albums[0]._id, "albumTree");
+    test.ok(data.albums);
+    test.equal(data.albums[0]._id, "albums");
     test.ok(data.albums[0].tree);
     test.done();
   },
@@ -57,8 +57,8 @@ exports["test CouchDB Local Connection"] = {
   "update albums": function (test) {
     albumsDb.readTree(function (err) {
       throw new Error(err);
-    }, function (data) {
-      albumsDb.saveTree(data, function (err) {
+    }, function (tree) {
+      albumsDb.saveTree(tree, function (err) {
         throw new Error(err);
       }, function (rev) {
         test.ok(rev);
@@ -70,9 +70,9 @@ exports["test CouchDB Local Connection"] = {
   "undo": function (test) {
     albumsDb.readTree(function (err) {
       throw new Error(err);
-    }, function (data) {
-      data[0].label = "save1";
-      albumsDb.saveTree(data, function (err) {
+    }, function (tree) {
+      tree[0].label = "save1";
+      albumsDb.saveTree(tree, function (err) {
         throw new Error(err);
       }, function (rev) {
         albumsDb.undo(rev, function (err) {
@@ -80,8 +80,8 @@ exports["test CouchDB Local Connection"] = {
         }, function (rev) {
           albumsDb.readTree(function (err) {
             throw new Error(err);
-          }, function (data) {
-            test.equals(data[0].label, "bar");
+          }, function (undoTree) {
+            test.equals(undoTree[0].label, "bar");
             test.done();
           });
         });
@@ -92,13 +92,13 @@ exports["test CouchDB Local Connection"] = {
   "no undo": function (test) {
     albumsDb.readTree(function (err) {
       throw new Error(err);
-    }, function (data) {
-      data[0].label = "save_no_1";
-      albumsDb.saveTree(data, function (err) {
+    }, function (tree) {
+      tree[0].label = "save_no_1";
+      albumsDb.saveTree(tree, function (err) {
         throw new Error(err);
       }, function (rev1) {
-        data[0].label = "save_no_2";
-        albumsDb.saveTree(data, function (err) {
+        tree[0].label = "save_no_2";
+        albumsDb.saveTree(tree, function (err) {
           throw new Error(err);
         }, function (rev2) {
           albumsDb.undo(rev1, function (err) {
@@ -106,8 +106,8 @@ exports["test CouchDB Local Connection"] = {
 
             albumsDb.readTree(function (err) {
               throw new Error(err);
-            }, function (data) {
-              test.equals(data[0].label, "save_no_2");
+            }, function (unrestoredTree) {
+              test.equals(unrestoredTree[0].label, "save_no_2");
               test.done();
             });
           }, function (rev) {

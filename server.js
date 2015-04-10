@@ -56,7 +56,7 @@ server.on('listening', function () {
 
 app.set('port', port);
 
-couchpenter.setUp(function (error, results) {
+couchpenter.reset(function (error, results) { //setUp
   if (error) {
     debug(error);
     throw error;

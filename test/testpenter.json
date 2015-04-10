@@ -1,7 +1,7 @@
 {
   "albums": [
     {
-      "_id": "albumTree",
+      "_id": "albums",
       "tree": [
         {
           "_id": "1",

@@ -10,23 +10,24 @@ module.exports = function (prefix) {
 
   return {
     readTree: function (errCallback, callback) {
-      albumsDb.get("albumTree", function (err, albumTree) {
-        callback(albumTree.tree);
+      albumsDb.get("albums", function (err, albums) {
+        callback(albums.tree);
       });
     },
 
-    saveTree: function (newTree, errCallback, callback) {
-      albumsDb.get("albumTree", function (err, albumTree) {
-        albumTree.tree = newTree;
-        albumsDb.insert(albumTree, function (err, body) {
-          callback(body.rev);
+    saveTree: function (newAlbumTree, errCallback, callback) {
+      albumsDb.get("albums", function (err, albums) {
+        var oldAlbumTree = albums.tree;
+        albums.tree = newAlbumTree;
+        albumsDb.insert(albums, function (err, body) {
+          callback(body.rev, oldAlbumTree, newAlbumTree);
         });
       });
     },
 
     undo: function (rev, errCallback, callback) {
-      albumsDb.get("albumTree", {revs: true}, function (err, albumTree) {
-        var revs = albumTree._revisions.ids;
+      albumsDb.get("albums", {revs: true}, function (err, albums) {
+        var revs = albums._revisions.ids;
 
         if (revs.length > 1) {
           var latestRev = revs.length + '-' + revs[0];
@@ -38,9 +39,9 @@ module.exports = function (prefix) {
 
           var prevRev = (revs.length - 1) + '-' + revs[1];
 
-          albumsDb.get("albumTree", {rev: prevRev}, function (err, restoredBody) {
-            albumTree.tree = restoredBody.tree;
-            albumsDb.insert(albumTree, function (err, body) {
+          albumsDb.get("albums", {rev: prevRev}, function (err, restoredAlbums) {
+            albums.tree = restoredAlbums.tree;
+            albumsDb.insert(albums, function (err, body) {
               callback(body.rev);
             });
           });

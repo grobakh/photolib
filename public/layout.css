@@ -185,6 +185,14 @@ body {
 .menu {
   margin-bottom: 20px;
 }
+ul {
+  list-style-type: none;
+}
+li {
+  height: 48px;
+  height: 4.8rem;
+  vertical-align: baseline;
+}
 /*
 
 h1

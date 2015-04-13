@@ -14,11 +14,13 @@ html
   body
     .decorator
       .container
-        .menu.grid12_12
+        .header.grid12_12
           h1.headline-font= title
+
+        .navigation
           block navigator
 
         block content
 
-        .footer.grid12_12
+        .footer
           block footer

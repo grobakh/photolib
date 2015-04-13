@@ -146,6 +146,62 @@
 .shift12_11 {
   padding-left: 880px;
 }
+.flat-button {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 20px;
+  line-height: 2rem;
+  color: #212121;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  height: 36px;
+  min-width: 64px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border: none;
+  background: #fff;
+}
+.flat-button:hover {
+  background: #dedede;
+}
+.flat-button:active {
+  background: #8a8a8a;
+}
+.raised-button {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 20px;
+  line-height: 2rem;
+  color: #212121;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  height: 36px;
+  min-width: 64px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border: none;
+  background: #fff;
+}
+.raised-button:hover {
+  background: #dedede;
+}
+.raised-button:active {
+  background: #8a8a8a;
+}
 * {
   margin: 0;
   padding: 0;
@@ -182,22 +238,21 @@ body {
   margin-right: auto;
   height: 100%;
 }
-.menu {
-  margin-bottom: 20px;
-}
 ul {
   list-style-type: none;
 }
 li {
+  height: 72px;
+  margin-left: 16px;
+}
+.header {
+  height: 56px;
+}
+.navigation {
   height: 48px;
-  height: 4.8rem;
-  vertical-align: baseline;
 }
 /*
 
-h1
-  display-font()
-  padding 1px 0 6px 0
 
 .footer
   border-top 1px solid #ccc
@@ -304,18 +359,27 @@ action(baseColor)
   -ms-user-select: none;
   user-select: none;
   outline: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
-  padding: 0 10px;
-  margin: 0 20px/2;
-  line-height: 26px;
+  height: 36px;
+  min-width: 64px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
   border: none;
   background: #fff;
   -webkit-box-shadow: 0px 2px 5px 0px #757575;
   -moz-box-shadow: 0px 2px 5px 0px #757575;
   box-shadow: 0px 2px 5px 0px #757575;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+}
+.global-action:hover {
+  background: #dedede;
+}
+.global-action:active {
+  background: #8a8a8a;
 }

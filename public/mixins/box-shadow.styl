@@ -1,4 +1,7 @@
-box-shadow-inset(hShadow, vShadow, blur, color)
-  -webkit-box-shadow: inset hShadow vShadow blur color
-  -moz-box-shadow: inset hShadow vShadow blur color
-  box-shadow: inset hShadow vShadow blur color
+box-shadow(hShadow, vShadow, blur, spread, color)
+  -webkit-box-shadow: hShadow vShadow blur spread color
+  -moz-box-shadow: hShadow vShadow blur spread color
+  box-shadow: hShadow vShadow blur spread color
+
+box-shadow-1()
+  box-shadow(0px, 2px, 5px, 0px, lightness(black, 46%))

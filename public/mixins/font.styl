@@ -1,9 +1,50 @@
-defaultFont()
-  font(14px, black)
 
-font(size, color)
-  font: size Verdana, Geneva, sans-serif
-  color: color
-  font-weight: normal
-  text-decoration: none
+font(sp, lh, weight, color)
+  font-family Verdana, Geneva, sans-serif
+  font-size (sp) px
+  font-size (sp / 10) rem
+  line-height (lh) px
+  line-height (lh / 10) rem
+  color color
+  font-weight weight
+  text-decoration none
+
+display-font()
+  font(34, 40, 300, lightness(black, 46%))
+
+.display-font
+  display-font()
+
+headline-font()
+  font(24, 32, 300, lightness(black, 13%))
+
+.headline-font
+  headline-font()
+
+subhead-font()
+  font(16, 24, 300, lightness(black, 13%))
+
+.subhead-font
+  subhead-font()
+
+title-font()
+  font(20, 28, 400, lightness(black, 13%))
+
+.title-font
+  title-font()
+
+body-font()
+  font(14, 20, 300, lightness(black, 13%))
+
+.body-font
+  body-font()
+
+button-font()
+  font(14, 20, 400, lightness(black, 13%))
+  text-transform: uppercase;
+
+.button-font
+  button-font()
+
+
 

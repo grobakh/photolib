@@ -1,0 +1,61 @@
+.display-font {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 34px;
+  font-size: 3.4rem;
+  line-height: 40px;
+  line-height: 4rem;
+  color: #757575;
+  font-weight: 300;
+  text-decoration: none;
+}
+.headline-font {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 32px;
+  line-height: 3.2rem;
+  color: #212121;
+  font-weight: 300;
+  text-decoration: none;
+}
+.subhead-font {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  color: #212121;
+  font-weight: 300;
+  text-decoration: none;
+}
+.title-font {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 28px;
+  line-height: 2.8rem;
+  color: #212121;
+  font-weight: 400;
+  text-decoration: none;
+}
+.body-font {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 20px;
+  line-height: 2rem;
+  color: #212121;
+  font-weight: 300;
+  text-decoration: none;
+}
+.button-font {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 20px;
+  line-height: 2rem;
+  color: #212121;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+}

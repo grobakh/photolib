@@ -87,7 +87,7 @@
 }
 div[data-angular-treeview] li {
   font: 14px Verdana, Geneva, sans-serif;
-  color: #666;
+  color: defaultColor;
   font-weight: normal;
   text-decoration: none;
   -webkit-user-select: none;
@@ -130,9 +130,9 @@ div[data-tree-model] li .normal {
   background-repeat: no-repeat;
 }
 div[data-tree-model] li .selected {
-  color: #000;
+  color: defaultColor;
   background-color: #d3e2f0;
 }
 div[data-tree-model] li .selected:hover {
-  color: #000;
+  color: defaultColor;
 }

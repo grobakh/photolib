@@ -5,17 +5,14 @@ div[data-angular-treeview] li
   :hover
     color hoverLinkColor
 
-
 div[data-tree-model] li
   span
-    subhead-font()
-    padding-right 8px
-    padding-left 8px
-    cursor pointer
+    subhead-font(false)
+    button-core()
     &:hover
       background lightness(paperColor, lightness(paperColor) - 10%)
-
-
+    &:active
+      background lightness(paperColor, lightness(paperColor) - 20%)
 
 div[data-tree-model] li .expanded
   padding-left gap
@@ -23,13 +20,11 @@ div[data-tree-model] li .expanded
   background-repeat no-repeat
   cursor pointer
 
-
 div[data-tree-model] li .collapsed
   padding-left gap
   background-image url("folder-closed.png")
   background-repeat no-repeat
   cursor pointer
-
 
 div[data-tree-model] li .normal
   padding-left gap

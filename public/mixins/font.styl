@@ -1,6 +1,6 @@
 @import "colors"
 
-font(sp, lh, weight, color, margins, inlineBlock = true)
+font(sp, lh, weight, color, inlineBlock = true)
   font-family Verdana, Geneva, sans-serif
   font-size (sp) px
   font-size (sp / 10) rem
@@ -9,49 +9,49 @@ font(sp, lh, weight, color, margins, inlineBlock = true)
   color color
   font-weight weight
   text-decoration none
-  margin-bottom (lh / 2) px if margins
-  margin-bottom (lh / 20) rem if margins
+  margin-bottom (lh / 2) px
+  margin-bottom (lh / 20) rem
   display inline-block if inlineBlock
 
-display-font(margins = true)
-  font(34, 40, 300, displayColor, margins)
+display-font()
+  font(34, 40, 300, displayColor)
 
 .display-font
   display-font()
 
-headline-font(margins = true)
-  font(24, 32, 300, bodyColor, margins)
+headline-font()
+  font(24, 32, 300, bodyColor)
 
 .headline-font
   headline-font()
 
-subhead-font(margins = true)
-  font(16, 24, 300, bodyColor, margins)
+subhead-font()
+  font(16, 24, 300, bodyColor)
 
 .subhead-font
   subhead-font()
 
-title-font(margins = true)
-  font(20, 28, 400, bodyColor, margins)
+title-font()
+  font(20, 28, 400, bodyColor)
 
 .title-font
   title-font()
 
-caption-font(margins = true)
-  font(12, 20, 300, displayColor, margins)
+caption-font()
+  font(12, 20, 300, displayColor)
 
 .caption-font
   caption-font()
 
-body-font(margins = false)
-  font(14, 20, 300, bodyColor, margins, false)
+body-font()
+  font(14, 20, 300, bodyColor, false)
 
 .body-font
   body-font()
 
-button-font(fontColor, margins = false)
-  font(14, 20, 400, fontColor, margins, false)
-  text-transform: uppercase;
+button-font(fontColor)
+  font(14, 20, 400, fontColor, false)
+  text-transform uppercase
 
 .button-font
   button-font(bodyColor)

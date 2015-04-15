@@ -1,18 +1,10 @@
 @import "../mixins"
 
-div[data-angular-treeview] li
-  user-select-none()
-  :hover
-    color hoverLinkColor
-
 div[data-tree-model] li
   span
-    subhead-font(false)
-    button-core()
-    &:hover
-      background lightness(paperColor, lightness(paperColor) - 10%)
-    &:active
-      background lightness(paperColor, lightness(paperColor) - 20%)
+    cursor pointer
+    min-width unit
+    subhead-font()
 
 div[data-tree-model] li .expanded
   padding-left gap

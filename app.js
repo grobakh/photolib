@@ -22,6 +22,7 @@ i18n.configure({
 });
 
 var app = express();
+app.disable('x-powered-by');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -59,34 +60,20 @@ app.use('/', routes);
 app.use('/admin', adminDashboard);
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
+app.use(function (req, res) {
   var err = new Error('Not Found');
   err.status = 404;
-  next(err);
+  res.render('404', {title: res.__("404")});
 });
 
-// error handlers
+app.use(function (err, req, res, next) {
+  err.status = err.status || 500;
+  res.status(err.status);
 
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function (err, req, res) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function (err, req, res) {
-  res.status(err.status || 500);
   res.render('error', {
-    message: err.message,
-    error: {}
+    title: err.status + " " + err.message
   });
+
 });
 
 module.exports = app;

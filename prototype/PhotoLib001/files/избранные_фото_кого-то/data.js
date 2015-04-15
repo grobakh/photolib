@@ -1,0 +1,383 @@
+﻿$axure.loadCurrentPage({
+  "url":"избранные_фото_кого-то.html",
+  "generationDate":new Date(1429122553683.52),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable"],
+  "page":{
+    "packageId":"12c03daad71f4ba79f3016135544d366",
+    "type":"Axure:Page",
+    "name":"Избранные фото кого-то",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"Applied Font",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"60ad01b580ba42338f38d43657cffff3",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h1",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":20},
+            "size":{
+              "width":370,
+              "height":37}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"992831b4c38f46dea28f10b776d62a47",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":20},
+                "size":{
+                  "width":370,
+                  "height":37}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"6bb74452a32448a7b225f528ebeabb28",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":128},
+            "size":{
+              "width":112,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"a2e521194e63493c9db5c438c84180e0",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":128},
+                "size":{
+                  "width":112,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Подборка фото in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"подборка_фото.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"70be68537d834826951e56f43a6a6dbf",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":204},
+            "size":{
+              "width":204,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"a16d9d5375334bd8b00fcca0a57f66c3",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":204},
+                "size":{
+                  "width":204,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Подборка фото in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"подборка_фото.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"85b84fde23d1496cb8b6573390685d8e",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":244},
+            "size":{
+              "width":77,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"c80ce13941d04d65acd42e40a56e0d47",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":244},
+                "size":{
+                  "width":77,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Подборка фото in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"подборка_фото.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"9ab0b625291642019156e240476ada03",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":282},
+            "size":{
+              "width":156,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"92936a523aa44dbc9254cbdb47ef4f2a",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":282},
+                "size":{
+                  "width":156,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Подборка фото in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"подборка_фото.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"46fdd5c83dd740cc950d38a0d5680b95",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":166},
+            "size":{
+              "width":226,
+              "height":56}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"86d36ef23489418690028941563c2161",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":166},
+                "size":{
+                  "width":226,
+                  "height":56}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Подборка фото in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"подборка_фото.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"f34bcddaa6d64fddb68c5b525464defd",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":67},
+            "size":{
+              "width":174,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"e4ed43bd82b043819963608436a16bd7",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":67},
+                "size":{
+                  "width":174,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Home in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"home.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "60ad01b580ba42338f38d43657cffff3":{
+      "scriptId":"u0"},
+    "992831b4c38f46dea28f10b776d62a47":{
+      "scriptId":"u1"},
+    "6bb74452a32448a7b225f528ebeabb28":{
+      "scriptId":"u2"},
+    "a2e521194e63493c9db5c438c84180e0":{
+      "scriptId":"u3"},
+    "70be68537d834826951e56f43a6a6dbf":{
+      "scriptId":"u4"},
+    "a16d9d5375334bd8b00fcca0a57f66c3":{
+      "scriptId":"u5"},
+    "85b84fde23d1496cb8b6573390685d8e":{
+      "scriptId":"u6"},
+    "c80ce13941d04d65acd42e40a56e0d47":{
+      "scriptId":"u7"},
+    "9ab0b625291642019156e240476ada03":{
+      "scriptId":"u8"},
+    "92936a523aa44dbc9254cbdb47ef4f2a":{
+      "scriptId":"u9"},
+    "46fdd5c83dd740cc950d38a0d5680b95":{
+      "scriptId":"u10"},
+    "86d36ef23489418690028941563c2161":{
+      "scriptId":"u11"},
+    "f34bcddaa6d64fddb68c5b525464defd":{
+      "scriptId":"u12"},
+    "e4ed43bd82b043819963608436a16bd7":{
+      "scriptId":"u13"}}});

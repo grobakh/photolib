@@ -1,0 +1,331 @@
+﻿$axure.loadCurrentPage({
+  "url":"фото_по_поездкам.html",
+  "generationDate":new Date(1429122552132.43),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable"],
+  "page":{
+    "packageId":"5834f2f14db84cb6830d53435fff7d73",
+    "type":"Axure:Page",
+    "name":"Фото по поездкам",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"Applied Font",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"621d47969e5a49bf89e6308e0f04a68c",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":67},
+            "size":{
+              "width":174,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"8d52b71ec43a447c9331dbb6c18b2980",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":67},
+                "size":{
+                  "width":174,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Home in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"home.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"593367ac77ee43b6b83e9539a27c060b",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h1",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":20},
+            "size":{
+              "width":133,
+              "height":37}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"ea215eb48e5240ef87160bbba22664ca",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":20},
+                "size":{
+                  "width":133,
+                  "height":37}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"04ce6d1978894321be784adf723bcee1",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":164},
+            "size":{
+              "width":166,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"28a9801a75a8463f87ff292b3d2518d7",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":164},
+                "size":{
+                  "width":166,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Псков 2014 in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"псков_2014.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"6ca5aea9cf9c4c01bb33b6b05b47601e",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":202},
+            "size":{
+              "width":200,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"c0735b63d08d41479527c3a71ffd9a8a",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":202},
+                "size":{
+                  "width":200,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Псков 2014 in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"псков_2014.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"91f3be99266944c9a58a280daad59500",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":240},
+            "size":{
+              "width":331,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"433d288e0dff478f80435447c62cf8a4",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":240},
+                "size":{
+                  "width":331,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Псков 2014 in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"псков_2014.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"dbedf20d1c104a2395716a94f3b5367c",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":126},
+            "size":{
+              "width":112,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"7081a18e274342629a2f1888507ed815",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":126},
+                "size":{
+                  "width":112,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open День 1 in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"день_1.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "621d47969e5a49bf89e6308e0f04a68c":{
+      "scriptId":"u0"},
+    "8d52b71ec43a447c9331dbb6c18b2980":{
+      "scriptId":"u1"},
+    "593367ac77ee43b6b83e9539a27c060b":{
+      "scriptId":"u2"},
+    "ea215eb48e5240ef87160bbba22664ca":{
+      "scriptId":"u3"},
+    "04ce6d1978894321be784adf723bcee1":{
+      "scriptId":"u4"},
+    "28a9801a75a8463f87ff292b3d2518d7":{
+      "scriptId":"u5"},
+    "6ca5aea9cf9c4c01bb33b6b05b47601e":{
+      "scriptId":"u6"},
+    "c0735b63d08d41479527c3a71ffd9a8a":{
+      "scriptId":"u7"},
+    "91f3be99266944c9a58a280daad59500":{
+      "scriptId":"u8"},
+    "433d288e0dff478f80435447c62cf8a4":{
+      "scriptId":"u9"},
+    "dbedf20d1c104a2395716a94f3b5367c":{
+      "scriptId":"u10"},
+    "7081a18e274342629a2f1888507ed815":{
+      "scriptId":"u11"}}});

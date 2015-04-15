@@ -1,0 +1,343 @@
+﻿$axure.loadCurrentPage({
+  "url":"результат_сортировки.html",
+  "generationDate":new Date(1429122560724.92),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable"],
+  "page":{
+    "packageId":"911ffd1b2fbc4680a12cec9b9b1bcd76",
+    "type":"Axure:Page",
+    "name":"Результат сортировки",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"Applied Font",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"dfe557d2722b469e81c90de4f13fda8d",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":67},
+            "size":{
+              "width":174,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"52164e5911e74e41a7017abb125e3938",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":67},
+                "size":{
+                  "width":174,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Home in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"home.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"4bff2510641b4d6aa43d31738861f0d8",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":204,
+              "y":67},
+            "size":{
+              "width":107,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"155cf22421f5409fa572e546daf37837",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":204,
+                  "y":67},
+                "size":{
+                  "width":107,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Админка in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"админка.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"02f7e0a6bc6d4c1e913bedead0687ba7",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "fontName":"'Arial Regular', 'Arial'",
+            "fontSize":"20px",
+            "fontWeight":"400",
+            "location":{
+              "x":20,
+              "y":142},
+            "size":{
+              "width":393,
+              "height":72}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"6f3152b5c2e141118749dfb81131cb5f",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'Arial Regular', 'Arial'",
+                "fontSize":"20px",
+                "fontWeight":"400",
+                "location":{
+                  "x":20,
+                  "y":142},
+                "size":{
+                  "width":393,
+                  "height":72}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"3e683761fa404585bed000385f2e4d5b",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "fontName":"'Arial Regular', 'Arial'",
+            "fontSize":"20px",
+            "fontWeight":"400",
+            "underline":true,
+            "location":{
+              "x":20,
+              "y":220},
+            "size":{
+              "width":101,
+              "height":24}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"51eaf502698b4024beaea80d6d489232",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'Arial Regular', 'Arial'",
+                "fontSize":"20px",
+                "fontWeight":"400",
+                "underline":true,
+                "location":{
+                  "x":20,
+                  "y":220},
+                "size":{
+                  "width":101,
+                  "height":24}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Отмена возможна",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Сортировка in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"сортировка.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]},
+{
+                  "description":"Отмена невозможна",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Отмена невозможна in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"отмена_невозможна_2.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"d518e3dc89df493b9146df94fffacdb9",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":270},
+            "size":{
+              "width":320,
+              "height":30},
+            "cornerRadiusTopLeft":"5"},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"c34daaf837864deab1a9d5242f82eab3",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":270},
+                "size":{
+                  "width":320,
+                  "height":30},
+                "cornerRadiusTopLeft":"5"},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Сортировка in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"сортировка.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/результат_сортировки/u8.png"}},
+{
+          "id":"2e84586edb164f89a8a923f95e03d465",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h1",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":20},
+            "size":{
+              "width":276,
+              "height":37}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"a45f62ebe51c4432b4ff8dbd31b7c816",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":20},
+                "size":{
+                  "width":276,
+                  "height":37}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "dfe557d2722b469e81c90de4f13fda8d":{
+      "scriptId":"u0"},
+    "52164e5911e74e41a7017abb125e3938":{
+      "scriptId":"u1"},
+    "4bff2510641b4d6aa43d31738861f0d8":{
+      "scriptId":"u2"},
+    "155cf22421f5409fa572e546daf37837":{
+      "scriptId":"u3"},
+    "02f7e0a6bc6d4c1e913bedead0687ba7":{
+      "scriptId":"u4"},
+    "6f3152b5c2e141118749dfb81131cb5f":{
+      "scriptId":"u5"},
+    "3e683761fa404585bed000385f2e4d5b":{
+      "scriptId":"u6"},
+    "51eaf502698b4024beaea80d6d489232":{
+      "scriptId":"u7"},
+    "d518e3dc89df493b9146df94fffacdb9":{
+      "scriptId":"u8"},
+    "c34daaf837864deab1a9d5242f82eab3":{
+      "scriptId":"u9"},
+    "2e84586edb164f89a8a923f95e03d465":{
+      "scriptId":"u10"},
+    "a45f62ebe51c4432b4ff8dbd31b7c816":{
+      "scriptId":"u11"}}});

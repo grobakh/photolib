@@ -1,0 +1,272 @@
+﻿$axure.loadCurrentPage({
+  "url":"отмена_невозможна_2.html",
+  "generationDate":new Date(1429122561105.94),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable"],
+  "page":{
+    "packageId":"9ddc9e78778e471f8a5cde902c52660b",
+    "type":"Axure:Page",
+    "name":"Отмена невозможна",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"Applied Font",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"bfb962411c5f49b79b0bc2161eab58f1",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "fontName":"'Arial Regular', 'Arial'",
+            "fontSize":"20px",
+            "fontWeight":"400",
+            "location":{
+              "x":20,
+              "y":142},
+            "size":{
+              "width":360,
+              "height":48}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"5e55d1c1794f4ef8a9ea9bb4bfa160bf",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'Arial Regular', 'Arial'",
+                "fontSize":"20px",
+                "fontWeight":"400",
+                "location":{
+                  "x":20,
+                  "y":142},
+                "size":{
+                  "width":360,
+                  "height":48}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"8101fee6bc844dcf8e571f556354540e",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":67},
+            "size":{
+              "width":174,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"98f2a54eb9c84ff0938986eea3161338",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":67},
+                "size":{
+                  "width":174,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Home in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"home.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"d714717a170741048f9f28f30c0cc2c8",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":204,
+              "y":67},
+            "size":{
+              "width":107,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"ecd83494028a40d1baed3cf6826267ed",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":204,
+                  "y":67},
+                "size":{
+                  "width":107,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Админка in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"админка.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"0aebb6d695fd4633bd76d6f634c75e4b",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":270},
+            "size":{
+              "width":320,
+              "height":30},
+            "cornerRadiusTopLeft":"5"},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"5e98ae6542544cb88a03e0fec71c0ed2",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":270},
+                "size":{
+                  "width":320,
+                  "height":30},
+                "cornerRadiusTopLeft":"5"},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Сортировка in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"сортировка.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/результат_сортировки/u8.png"}},
+{
+          "id":"dc21bfd3e0dc4f1aa9be77ad6d904183",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h1",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":20},
+            "size":{
+              "width":276,
+              "height":37}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"44b63d34296e4b01987e2260c754f281",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":20},
+                "size":{
+                  "width":276,
+                  "height":37}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "bfb962411c5f49b79b0bc2161eab58f1":{
+      "scriptId":"u0"},
+    "5e55d1c1794f4ef8a9ea9bb4bfa160bf":{
+      "scriptId":"u1"},
+    "8101fee6bc844dcf8e571f556354540e":{
+      "scriptId":"u2"},
+    "98f2a54eb9c84ff0938986eea3161338":{
+      "scriptId":"u3"},
+    "d714717a170741048f9f28f30c0cc2c8":{
+      "scriptId":"u4"},
+    "ecd83494028a40d1baed3cf6826267ed":{
+      "scriptId":"u5"},
+    "0aebb6d695fd4633bd76d6f634c75e4b":{
+      "scriptId":"u6"},
+    "5e98ae6542544cb88a03e0fec71c0ed2":{
+      "scriptId":"u7"},
+    "dc21bfd3e0dc4f1aa9be77ad6d904183":{
+      "scriptId":"u8"},
+    "44b63d34296e4b01987e2260c754f281":{
+      "scriptId":"u9"}}});

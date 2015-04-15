@@ -1,0 +1,272 @@
+﻿$axure.loadCurrentPage({
+  "url":"отмена_невозможна_1.html",
+  "generationDate":new Date(1429122559333.84),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable"],
+  "page":{
+    "packageId":"a4ce607eb402459cb667e2be7a38d26d",
+    "type":"Axure:Page",
+    "name":"Отмена невозможна",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"Applied Font",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"bfb962411c5f49b79b0bc2161eab58f1",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "fontName":"'Arial Regular', 'Arial'",
+            "fontSize":"20px",
+            "fontWeight":"400",
+            "location":{
+              "x":20,
+              "y":142},
+            "size":{
+              "width":360,
+              "height":48}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"5e55d1c1794f4ef8a9ea9bb4bfa160bf",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'Arial Regular', 'Arial'",
+                "fontSize":"20px",
+                "fontWeight":"400",
+                "location":{
+                  "x":20,
+                  "y":142},
+                "size":{
+                  "width":360,
+                  "height":48}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"171ad30b5312404e8614960310f8c367",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h1",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":20},
+            "size":{
+              "width":347,
+              "height":37}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"0542ca2952f7404caa1b5a5083cc19ea",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":20},
+                "size":{
+                  "width":347,
+                  "height":37}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"bdc8260518a046c4a830221fb4bb6599",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":67},
+            "size":{
+              "width":174,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"6bb7065a61ce48f4a31379668e7a011c",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":67},
+                "size":{
+                  "width":174,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Home in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"home.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"4309f0b9379840429664741f3f868a67",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"h2",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":204,
+              "y":67},
+            "size":{
+              "width":107,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"6f1092af934c4060b88bd622aab9e064",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":204,
+                  "y":67},
+                "size":{
+                  "width":107,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Админка in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"админка.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"54b58478abd04ab5844e3f68b322299e",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":20,
+              "y":240},
+            "size":{
+              "width":290,
+              "height":30},
+            "cornerRadiusTopLeft":"5"},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"bb2462a3552d4ed4b17efe1bff1d3354",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":20,
+                  "y":240},
+                "size":{
+                  "width":290,
+                  "height":30},
+                "cornerRadiusTopLeft":"5"},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Админка in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"админка.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/результат_быстрой_загрузки/u8.png"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "bfb962411c5f49b79b0bc2161eab58f1":{
+      "scriptId":"u0"},
+    "5e55d1c1794f4ef8a9ea9bb4bfa160bf":{
+      "scriptId":"u1"},
+    "171ad30b5312404e8614960310f8c367":{
+      "scriptId":"u2"},
+    "0542ca2952f7404caa1b5a5083cc19ea":{
+      "scriptId":"u3"},
+    "bdc8260518a046c4a830221fb4bb6599":{
+      "scriptId":"u4"},
+    "6bb7065a61ce48f4a31379668e7a011c":{
+      "scriptId":"u5"},
+    "4309f0b9379840429664741f3f868a67":{
+      "scriptId":"u6"},
+    "6f1092af934c4060b88bd622aab9e064":{
+      "scriptId":"u7"},
+    "54b58478abd04ab5844e3f68b322299e":{
+      "scriptId":"u8"},
+    "bb2462a3552d4ed4b17efe1bff1d3354":{
+      "scriptId":"u9"}}});

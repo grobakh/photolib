@@ -13,7 +13,7 @@
 .grid12_10,
 .grid12_11,
 .grid12_12 {
-  display: inline;
+  display: inline-block;
   float: left;
   position: relative;
   margin-left: 10px;

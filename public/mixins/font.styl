@@ -1,5 +1,5 @@
 
-font(sp, lh, weight, color)
+font(sp, lh, weight, color, inlineBlock)
   font-family Verdana, Geneva, sans-serif
   font-size (sp) px
   font-size (sp / 10) rem
@@ -8,43 +8,52 @@ font(sp, lh, weight, color)
   color color
   font-weight weight
   text-decoration none
+  margin-bottom (lh / 2) px
+  margin-bottom (lh / 20) rem
+  display inline-block if inlineBlock
 
 display-font()
-  font(34, 40, 300, lightness(black, 46%))
+  font(34, 40, 300, displayColor, true)
 
 .display-font
   display-font()
 
 headline-font()
-  font(24, 32, 300, lightness(black, 13%))
+  font(24, 32, 300, bodyColor, true)
 
 .headline-font
   headline-font()
 
 subhead-font()
-  font(16, 24, 300, lightness(black, 13%))
+  font(16, 24, 300, bodyColor, true)
 
 .subhead-font
   subhead-font()
 
 title-font()
-  font(20, 28, 400, lightness(black, 13%))
+  font(20, 28, 400, bodyColor, true)
 
 .title-font
   title-font()
 
+caption-font()
+  font(12, 20, 300, displayColor, true)
+
+.caption-font
+  caption-font()
+
 body-font()
-  font(14, 20, 300, lightness(black, 13%))
+  font(14, 20, 300, bodyColor, false)
 
 .body-font
   body-font()
 
-button-font()
-  font(14, 20, 400, lightness(black, 13%))
+button-font(fontColor)
+  font(14, 20, 400, fontColor, true)
   text-transform: uppercase;
 
 .button-font
-  button-font()
+  button-font(bodyColor)
 
 
 

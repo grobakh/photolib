@@ -1,30 +1,26 @@
-flat-button()
-  button-font()
+button-outer(fontColor, backColor)
+  button-font(fontColor)
   user-select-none()
   border-radius(3px)
   cursor pointer
   display inline-block
   vertical-align middle
   height 36px
-  min-width 64px
+  line-height 36px
+  min-width unit
   padding-left 8px
   padding-right 8px
-  margin-left 4px
-  margin-right 4px
-
+  margin-left 5px
+  margin-right 5px
   border none
-  background lightness(black, 100%)
+  background backColor
   &:hover
-    background lightness(black, 87%)
+    background lightness(backColor, lightness(backColor) - 10%)
   &:active
-    background lightness(black, 54%)
-
-raised-button()
-  flat-button()
-  box-shadow-1()
+    background lightness(backColor, lightness(backColor) - 20%)
 
 .flat-button
-  flat-button()
+  button-outer(bodyColor, paperColor)
 
-.raised-button
-  raised-button()
+.primary-button
+  button-outer(paperColor, primaryColor)

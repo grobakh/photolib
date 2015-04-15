@@ -1,6 +1,5 @@
-line = 10px
-gap = 2 * line
-unit = 6 * line
+gap = 20px
+unit = 3 * gap
 content = 12 * unit + 12 * gap
 
 container()
@@ -17,7 +16,7 @@ decorator(y, x)
 grid12(n)
   width (n * unit + (n - 1) * gap)
   +cache()
-    display inline
+    display inline-block
     float left
     position relative
     margin-left (gap / 2)

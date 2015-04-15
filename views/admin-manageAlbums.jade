@@ -13,19 +13,16 @@ block favicon
   link(rel="shortcut icon" href="/red-favicon.png?v=1" type="image/x-icon")
 
 block navigator
-  .navigation
-    .crump
-      a(href="/")= __("toIndex")
-    +separator
-    .crump
-      a(href="/admin")= __("adminDashboard")
+  .grid12_12
+    a.crump(href="/")= __("toIndex")
+    a.crump(href="/admin")= __("adminDashboard")
 
 block content
   div(ng-app="albumTreeApp"): div(ng-controller="treeController" ng-init="albumTree=#{JSON.stringify(albumTree)}")
     .grid12_4
       .actionBlock
-          button.global-action(ng-click="saveChanges()")= __("saveChanges")
-          +separator
-          a.global-action(href="/admin")= __("cancel")
+          button.primary-button(ng-click="saveChanges()")= __("saveChanges")
+          a.flat-button(href="/admin")= __("cancel")
+
     .grid12_8
         div(data-angular-treeview="true" data-tree-id="albums" data-tree-model="albumTree")

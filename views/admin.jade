@@ -4,12 +4,13 @@ block favicon
   link(rel="shortcut icon" href="/red-favicon.png?v=1" type="image/x-icon")
 
 block navigator
-  .crump.grid12_12
-    a(href="/")= __("toIndex")
+  .grid12_12
+    a.crump(href="/")= __("toIndex")
 
 block content
   .grid12_12
-    .largeLink
-      a(href="/admin/uploadAndEdit")= __("uploadAndEdit")
-    .largeLink
-      a(href="/admin/manageAlbums")= __("manageAlbums")
+    ul
+      li
+        a.subhead-font(href="/admin/uploadAndEdit")= __("uploadAndEdit")
+      li
+        a.subhead-font(href="/admin/manageAlbums")= __("manageAlbums")

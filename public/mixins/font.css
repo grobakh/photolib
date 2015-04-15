@@ -4,9 +4,12 @@
   font-size: 3.4rem;
   line-height: 40px;
   line-height: 4rem;
-  color: #757575;
+  color: displayColor;
   font-weight: 300;
   text-decoration: none;
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  display: inline-block;
 }
 .headline-font {
   font-family: Verdana, Geneva, sans-serif;
@@ -14,9 +17,12 @@
   font-size: 2.4rem;
   line-height: 32px;
   line-height: 3.2rem;
-  color: #212121;
+  color: bodyColor;
   font-weight: 300;
   text-decoration: none;
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+  display: inline-block;
 }
 .subhead-font {
   font-family: Verdana, Geneva, sans-serif;
@@ -24,9 +30,12 @@
   font-size: 1.6rem;
   line-height: 24px;
   line-height: 2.4rem;
-  color: #212121;
+  color: bodyColor;
   font-weight: 300;
   text-decoration: none;
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  display: inline-block;
 }
 .title-font {
   font-family: Verdana, Geneva, sans-serif;
@@ -34,9 +43,25 @@
   font-size: 2rem;
   line-height: 28px;
   line-height: 2.8rem;
-  color: #212121;
+  color: bodyColor;
   font-weight: 400;
   text-decoration: none;
+  margin-bottom: 14px;
+  margin-bottom: 1.4rem;
+  display: inline-block;
+}
+.caption-font {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 20px;
+  line-height: 2rem;
+  color: displayColor;
+  font-weight: 300;
+  text-decoration: none;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  display: inline-block;
 }
 .body-font {
   font-family: Verdana, Geneva, sans-serif;
@@ -44,9 +69,11 @@
   font-size: 1.4rem;
   line-height: 20px;
   line-height: 2rem;
-  color: #212121;
+  color: bodyColor;
   font-weight: 300;
   text-decoration: none;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 .button-font {
   font-family: Verdana, Geneva, sans-serif;
@@ -54,8 +81,11 @@
   font-size: 1.4rem;
   line-height: 20px;
   line-height: 2rem;
-  color: #212121;
+  color: bodyColor;
   font-weight: 400;
   text-decoration: none;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  display: inline-block;
   text-transform: uppercase;
 }

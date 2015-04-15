@@ -1,15 +1,6 @@
 extends layout
 
 block content
-
-  //.grid12_12
-  //  .display-font Съешь же ещё этих мягких французских булок, да выпей чаю.
-  //  .headline-font Съешь же ещё этих мягких французских булок, да выпей чаю.
-  //  .subhead-font Съешь же ещё этих мягких французских булок, да выпей чаю.
-  //  .title-font Съешь же ещё этих мягких французских булок, да выпей чаю.
-  //  .body-font Съешь же ещё этих мягких французских булок, да выпей чаю.
-  //  .button-font Съешь же ещё этих мягких французских булок, да выпей чаю.
-
   .catalog.grid12_12
     ul
       li
@@ -20,6 +11,5 @@ block content
         a.subhead-font Избранные фото Вовы
 
 block footer
-  .grid12_12
-    div.flat-button
-      a(href="/admin")= __("adminDashboard")
+  .footer.grid12_12
+      a.caption-font(href="/admin")= __("adminDashboard")

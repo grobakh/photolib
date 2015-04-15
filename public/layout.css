@@ -395,7 +395,9 @@ li {
 }
 .footer {
   border-top: 1px solid #dedede;
+  margin-top: 20px;
   margin-top: 2rem;
+  padding-top: 20px;
   padding-top: 2rem;
 }
 .crump {
@@ -416,4 +418,8 @@ li {
 }
 .crump::after {
   content: " →";
+}
+.subheader {
+  margin-top: 20px;
+  margin-top: 2rem;
 }

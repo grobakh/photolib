@@ -4,18 +4,15 @@ block favicon
   link(rel="shortcut icon" href="/red-favicon.png?v=1" type="image/x-icon")
 
 block navigator
-  .navigation
-    .crump
-      a(href="/")= __("toIndex")
-    +separator
-    .crump
-      a(href="/admin")= __("adminDashboard")
+  .grid12_12
+      a.crump(href="/")= __("toIndex")
+      a.crump(href="/admin")= __("adminDashboard")
 
 block content
   .grid12_12
     div= __("saveChangesSuccessful")
     div= __("saveChangesInfo", albumsRemoved, photosRecovery)
-    .link
-      a(href="/admin/manageAlbums/cancel/#{rev}")= __("cancelQuestion")
-    .largeLink
-      a(href="/admin/manageAlbums")= __("continueManageAlbums")
+    div
+      a.body-font(href="/admin/manageAlbums/cancel/#{rev}")= __("cancelQuestion")
+    div.subheader
+      a.subhead-font(href="/admin/manageAlbums")= __("continueManageAlbums")

@@ -1,5 +1,6 @@
 extends layout
 
+
 block styles
   link(rel="stylesheet" href="/treeview/angular.treeview.css" type="text/css")
 block scripts
@@ -18,7 +19,11 @@ block navigator
     a.crump(href="/admin")= __("adminDashboard")
 
 block content
-  div(ng-app="albumTreeApp"): div(ng-controller="treeController" ng-init="albumTree=#{JSON.stringify(albumTree)}")
+  - var newFolderLabel = __("newFolder")
+  - var newAlbumLabel = __("newAlbum")
+
+  div(ng-app="albumTreeApp"): div(ng-controller="treeController"
+    ng-init="albumTree=#{JSON.stringify(albumTree)}; newAlbumLabel='#{newAlbumLabel}'; newFolderLabel='#{newFolderLabel}'")
     .grid12_4
       div
         button.flat-button(ng-disabled="albums.currentNode.isLeaf" ng-click="addAlbum()")= __("addAlbum")

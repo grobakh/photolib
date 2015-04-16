@@ -20,9 +20,22 @@ block navigator
 block content
   div(ng-app="albumTreeApp"): div(ng-controller="treeController" ng-init="albumTree=#{JSON.stringify(albumTree)}")
     .grid12_4
-      .actionBlock
-          button.primary-button(ng-click="saveChanges()")= __("saveChanges")
-          a.flat-button(href="/admin")= __("cancel")
+      div
+        button.flat-button(ng-disabled="albums.currentNode.isLeaf" ng-click="addAlbum()")= __("addAlbum")
+      div
+        button.flat-button(ng-disabled="albums.currentNode.isLeaf" ng-click="addFolder()")= __("addFolder")
+      div
+        button.flat-button(ng-click="rename()")= __("rename")
+      div
+        button.flat-button(ng-click="remove()")= __("remove")
+      div
+        span.action-icon-up(ng-click="moveUp()")
+        span.action-icon-down(ng-click="moveDown()")
+        span.action-icon-left(ng-click="moveLeft()")
+        span.action-icon-right(ng-click="moveRight()")
+      .subheader
+        button.primary-button(ng-click="saveChanges()")= __("saveChanges")
+        a.flat-button(href="/admin")= __("cancel")
 
     .grid12_8
         div(data-angular-treeview="true" data-tree-id="albums" data-tree-model="albumTree")

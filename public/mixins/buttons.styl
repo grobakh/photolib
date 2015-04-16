@@ -11,24 +11,33 @@ button-core()
   vertical-align middle
   height 36px
   line-height 36px
-  min-width unit
   padding-left 8px
   padding-right 8px
-
+  margin-left 5px
+  margin-right 5px
 
 button-outer(fontColor, backColor)
   button-font(fontColor)
   button-core()
-  margin-left 5px
-  margin-right 5px
+  transition-duration 100ms
+  min-width unit
   background backColor
   &:hover
-    background lightness(backColor, lightness(backColor) - 10%)
+    background darken(backColor, 10%)
   &:active
-    background lightness(backColor, lightness(backColor) - 20%)
+    background darken(backColor, 20%)
+  &[disabled]
+    background lighten(backColor, 50%)
+    color lighten(fontColor, 50%)
+    cursor auto
 
-.flat-button
-  button-outer(bodyColor, paperColor)
-
-.primary-button
-  button-outer(paperColor, primaryColor)
+action-icon(fontColor = bodyColor, backColor = paperColor)
+  button-font(fontColor)
+  button-core()
+  transition-duration 100ms
+  background backColor
+  width 36px
+  &:hover
+    background darken(backColor, 10%)
+  &:active
+    background darken(backColor, 20%)

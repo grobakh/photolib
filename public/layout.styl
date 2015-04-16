@@ -15,6 +15,27 @@ body
   height 100%
   background desktopColor
 
+.display-font
+  display-font()
+
+.headline-font
+  headline-font()
+
+.subhead-font
+  subhead-font()
+
+.title-font
+  title-font()
+
+.caption-font
+  caption-font()
+
+.body-font
+  body-font()
+
+.button-font
+  button-font(bodyColor)
+
 .decorator
   decorator(10px, gap / 2)
   background paperColor
@@ -27,11 +48,13 @@ body
 ul
   list-style-type none
   border none
-li
-  vertical-align middle
-  height 48px
-  line-height 48px
-  margin-left gap
+
+.catalog
+  li
+    vertical-align middle
+    height 48px
+    line-height 48px
+    margin-left gap
 
 .footer
   border-top 1px solid desktopColor
@@ -46,8 +69,30 @@ li
   margin-left 5px
   margin-right 5px
   &::after
-    content " →"
+    content " ›"
 
 .subheader
   margin-top 20px
-  margin-top 2rem
+
+.flat-button
+  button-outer(bodyColor, paperColor)
+
+.primary-button
+  button-outer(paperColor, primaryColor)
+
+.action-icon-up
+  action-icon()
+  &::after
+    content "↑"
+.action-icon-down
+  action-icon()
+  &::after
+    content "↓"
+.action-icon-left
+  action-icon()
+  &::after
+    content "←"
+.action-icon-right
+  action-icon()
+  &::after
+    content "→"

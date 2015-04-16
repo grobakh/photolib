@@ -399,6 +399,11 @@ li {
 .action-icon-up:active {
   background: #ccc;
 }
+.action-icon-up[disabled] {
+  background: #fff;
+  color: #909090;
+  cursor: auto;
+}
 .action-icon-up::after {
   content: "↑";
 }
@@ -442,6 +447,11 @@ li {
 }
 .action-icon-down:active {
   background: #ccc;
+}
+.action-icon-down[disabled] {
+  background: #fff;
+  color: #909090;
+  cursor: auto;
 }
 .action-icon-down::after {
   content: "↓";
@@ -487,6 +497,11 @@ li {
 .action-icon-left:active {
   background: #ccc;
 }
+.action-icon-left[disabled] {
+  background: #fff;
+  color: #909090;
+  cursor: auto;
+}
 .action-icon-left::after {
   content: "←";
 }
@@ -530,6 +545,11 @@ li {
 }
 .action-icon-right:active {
   background: #ccc;
+}
+.action-icon-right[disabled] {
+  background: #fff;
+  color: #909090;
+  cursor: auto;
 }
 .action-icon-right::after {
   content: "→";

@@ -41,3 +41,7 @@ action-icon(fontColor = bodyColor, backColor = paperColor)
     background darken(backColor, 10%)
   &:active
     background darken(backColor, 20%)
+  &[disabled]
+    background lighten(backColor, 50%)
+    color lighten(fontColor, 50%)
+    cursor auto

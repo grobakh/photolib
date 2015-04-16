@@ -30,14 +30,14 @@ block content
       div
         button.flat-button(ng-disabled="albums.currentNode.isLeaf" ng-click="addFolder()")= __("addFolder")
       div
-        button.flat-button(ng-click="rename()")= __("rename")
+        button.flat-button(ng-disabled="!albums.currentNode" ng-click="rename()")= __("rename")
       div
-        button.flat-button(ng-click="remove()")= __("remove")
+        button.flat-button(ng-disabled="!albums.currentNode" ng-click="remove()")= __("remove")
       div
-        span.action-icon-up(ng-click="moveUp()")
-        span.action-icon-down(ng-click="moveDown()")
-        span.action-icon-left(ng-click="moveLeft()")
-        span.action-icon-right(ng-click="moveRight()")
+        span.action-icon-up(ng-disabled="!albums.currentNode" ng-click="moveUp()")
+        span.action-icon-down(ng-disabled="!albums.currentNode" ng-click="moveDown()")
+        span.action-icon-left(ng-disabled="!albums.currentNode" ng-click="moveLeft()")
+        span.action-icon-right(ng-disabled="!albums.currentNode" ng-click="moveRight()")
       .subheader
         button.primary-button(ng-click="saveChanges()")= __("saveChanges")
         a.flat-button(href="/admin")= __("cancel")

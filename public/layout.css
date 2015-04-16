@@ -186,6 +186,18 @@ body {
   margin-bottom: 10px;
   margin-bottom: 1rem;
 }
+.primary-body-font {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 20px;
+  line-height: 2rem;
+  color: #2196f3;
+  font-weight: 300;
+  text-decoration: none;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
+}
 .button-font {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 14px;

@@ -13,6 +13,6 @@ block content
     div= __("saveChangesSuccessful")
     div= __("saveChangesInfo", albumsRemoved, photosRecovery)
     div
-      a.body-font(href="/admin/manageAlbums/cancel/#{rev}")= __("cancelQuestion")
+      a.primary-body-font(href="/admin/manageAlbums/cancel/#{rev}")= __("cancelQuestion")
     div.subheader
       a.subhead-font(href="/admin/manageAlbums")= __("continueManageAlbums")

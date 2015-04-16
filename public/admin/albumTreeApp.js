@@ -14,12 +14,12 @@
         if (node && !node.isLeaf) {
           node.children = node.children || [];
           node.collapsed = false;
+          node.selected = false;
           selectedChildren = node.children;
         }
 
-        var newNode = {label: "undefined", isLeaf: false};
+        var newNode = {label: $scope.newFolderLabel, isLeaf: false};
         selectedChildren.push(newNode);
-        node.selected = false;
         newNode.selected = 'selected';
         newNode.collapsed = false;
         $scope.albums.currentNode = newNode;
@@ -36,7 +36,7 @@
           selectedChildren = node.children;
         }
 
-        selectedChildren.push({label: "undefined", isLeaf: true});
+        selectedChildren.push({label: $scope.newAlbumLabel, isLeaf: true});
       };
 
       $scope.remove = function () {

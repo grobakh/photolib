@@ -18,5 +18,7 @@
   "moveUp": "Вверх",
   "moveLeft": "Влево",
   "moveRight": "Вправо",
-  "moveDown": "Вниз"
+  "moveDown": "Вниз",
+  "newFolder": "Новая папка",
+  "newAlbum": "Новая альбом"
 }

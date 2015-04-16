@@ -9,31 +9,31 @@
 
       $scope.addFolder = function () {
         var selectedChildren = $scope.albumTree;
+        var node = $scope.albums.currentNode;
 
-        if ($scope.albums.currentNode) {
-          var node = $scope.albums.currentNode;
-
-          if (node !== null && !node.isLeaf) {
-            node.children = node.children || [];
-            node.collapsed = false;
-            selectedChildren = node.children;
-          }
+        if (node && !node.isLeaf) {
+          node.children = node.children || [];
+          node.collapsed = false;
+          selectedChildren = node.children;
         }
 
-        selectedChildren.push({label: "undefined", isLeaf: false});
+        var newNode = {label: "undefined", isLeaf: false};
+        selectedChildren.push(newNode);
+        node.selected = false;
+        newNode.selected = 'selected';
+        newNode.collapsed = false;
+        $scope.albums.currentNode = newNode;
+
       };
 
       $scope.addAlbum = function () {
         var selectedChildren = $scope.albumTree;
+        var node = $scope.albums.currentNode;
 
-        if ($scope.albums.currentNode) {
-          var node = $scope.albums.currentNode;
-
-          if (node !== null && !node.isLeaf) {
-            node.children = node.children || [];
-            node.collapsed = false;
-            selectedChildren = node.children;
-          }
+        if (node && !node.isLeaf) {
+          node.children = node.children || [];
+          node.collapsed = false;
+          selectedChildren = node.children;
         }
 
         selectedChildren.push({label: "undefined", isLeaf: true});

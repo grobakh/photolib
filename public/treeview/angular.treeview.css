@@ -85,9 +85,6 @@
 .shift12_11 {
   padding-left: 880px;
 }
-div[data-tree-model] li {
-  padding-left: 20px;
-}
 div[data-tree-model] li span {
   cursor: pointer;
   min-width: 60px;

@@ -97,7 +97,7 @@ div[data-tree-model] li.expanded::before {
   top: 24px;
   bottom: 12px;
 }
-div[data-tree-model] li span {
+div[data-tree-model] li span.label {
   cursor: pointer;
   min-width: 60px;
   font-family: Verdana, Geneva, sans-serif;
@@ -112,7 +112,7 @@ div[data-tree-model] li span {
   margin-bottom: 1.2rem;
   display: inline-block;
 }
-div[data-tree-model] li span.selected {
+div[data-tree-model] li span.label.selected {
   color: #2196f3;
 }
 div[data-tree-model] li i.expanded {

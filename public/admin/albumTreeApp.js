@@ -39,7 +39,10 @@
           selectedChildren = node.children;
         }
 
-        var newNode = {label: $scope.newFolderLabel + " #" + counter++, isLeaf: false};
+        var newNode = {
+          label: $scope.newFolderLabel + " #" + counter++,
+          isLeaf: false
+        };
         selectedChildren.push(newNode);
         newNode.selected = 'selected';
         newNode.collapsed = false;
@@ -57,7 +60,22 @@
           selectedChildren = node.children;
         }
 
-        selectedChildren.push({label: $scope.newAlbumLabel + " #" + counter++, isLeaf: true});
+        selectedChildren.push({
+          label: $scope.newAlbumLabel + " #" + counter++,
+          isLeaf: true
+        });
+      };
+
+      $scope.rename = function () {
+        if ($scope.albums.currentNode) {
+          var node = $scope.albums.currentNode;
+
+          if (!node.rename) {
+            node.rename = function () {
+              delete node.rename;
+            };
+          }
+        }
       };
 
       $scope.remove = function () {
@@ -72,6 +90,10 @@
         }
       };
 
+      function isOnTop(node) {
+        return $scope.albumTree.indexOf(node) !== -1;
+      }
+
       $scope.moveUp = function () {
         if ($scope.albums.currentNode) {
           var node = $scope.albums.currentNode;
@@ -79,9 +101,18 @@
 
           if (parentScope) {
             var oldIndex = parentScope.indexOf(node);
-            var newIndex = oldIndex > 0 ? oldIndex - 1 : oldIndex;
-            parentScope.splice(oldIndex, 1);
-            parentScope.splice(newIndex, 0, node);
+
+            if (oldIndex === 0) {
+              if (!isOnTop(node)) {
+                $scope.moveLeft();
+                $scope.moveUp();
+                $scope.moveRight();
+              }
+            } else {
+              var newIndex = oldIndex - 1;
+              parentScope.splice(oldIndex, 1);
+              parentScope.splice(newIndex, 0, node);
+            }
           }
         }
       };
@@ -152,6 +183,7 @@
           var item = scope[i];
           delete item.selected;
           delete item.collapsed;
+          delete item.rename;
 
           if (item.children) {
             purify(item.children);

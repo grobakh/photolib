@@ -24,6 +24,13 @@
 
         var expandedExpr = "node.isLeaf || node.collapsed ? 'collapsed' : 'expanded'";
 
+        var switchTemplate = '<span ng-switch on="!!node.rename">' +
+          '<input ng-switch-when="true" ng-model="node.label" ng-blur="node.rename()" />' +
+          '<span class="label" data-ng-class="node.selected" ' +
+          'data-ng-click="' + treeId + '.selectNodeLabel(node)" ' +
+          'ng-switch-default>{{node.' + nodeLabel + '}}</span>' +
+          '</span>';
+
         //tree template
         var template =
           '<ul>' +
@@ -31,7 +38,7 @@
           '<i class="collapsed" data-ng-hide="node.' + isLeaf + ' || !node.collapsed" data-ng-click="' + treeId + '.selectNodeHead(node)"></i>' +
           '<i class="expanded" data-ng-hide="node.' + isLeaf + ' || node.collapsed" data-ng-click="' + treeId + '.selectNodeHead(node)"></i>' +
           '<i class="normal" data-ng-show="node.' + isLeaf + '"></i> ' +
-          '<span data-ng-class="node.selected" data-ng-click="' + treeId + '.selectNodeLabel(node)">{{node.' + nodeLabel + '}}</span>' +
+          switchTemplate +
           '<div data-ng-hide="node.collapsed" data-tree-id="' + treeId + '" data-tree-model="node.' + nodeChildren
           + '" data-node-id=' + nodeId + ' data-node-label=' + nodeLabel +
           ' data-node-children=' + nodeChildren + '></div>' +

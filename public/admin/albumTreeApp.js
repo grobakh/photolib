@@ -1,6 +1,8 @@
 (function () {
   var albumTreeApp = angular.module('albumTreeApp', ['angularTreeview']);
 
+  var counter = 1;
+
   albumTreeApp.controller('treeController', ["$scope", "$http",
     function ($scope, $http) {
 
@@ -37,7 +39,7 @@
           selectedChildren = node.children;
         }
 
-        var newNode = {label: $scope.newFolderLabel, isLeaf: false};
+        var newNode = {label: $scope.newFolderLabel + " #" + counter++, isLeaf: false};
         selectedChildren.push(newNode);
         newNode.selected = 'selected';
         newNode.collapsed = false;
@@ -55,7 +57,7 @@
           selectedChildren = node.children;
         }
 
-        selectedChildren.push({label: $scope.newAlbumLabel, isLeaf: true});
+        selectedChildren.push({label: $scope.newAlbumLabel + " #" + counter++, isLeaf: true});
       };
 
       $scope.remove = function () {

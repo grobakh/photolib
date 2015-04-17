@@ -9,8 +9,8 @@ font(sp, lh, weight, color, inlineBlock = true)
   color color
   font-weight weight
   text-decoration none
-  margin-bottom (lh / 2) px
-  margin-bottom (lh / 20) rem
+  margin-bottom (lh / 2) px if inlineBlock
+  margin-bottom (lh / 20) rem if inlineBlock
   display inline-block if inlineBlock
 
 display-font()

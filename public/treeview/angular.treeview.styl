@@ -1,29 +1,36 @@
 @import "../mixins"
 
 div[data-tree-model] li
+  position relative
+  &.expanded::before
+    content ''
+    margin-left 8px
+    width 1px
+    position absolute
+    background desktopColor
+    top 24px
+    bottom 0
   span
     cursor pointer
     min-width unit
     subhead-font()
+    &.selected
+      color primaryColor
 
-div[data-tree-model] li .expanded
+div[data-tree-model] li i.expanded
   padding-left gap
   background-image url("folder.png")
   background-repeat no-repeat
   cursor pointer
 
-div[data-tree-model] li .collapsed
+div[data-tree-model] li i.collapsed
   padding-left gap
   background-image url("folder-closed.png")
   background-repeat no-repeat
   cursor pointer
 
-div[data-tree-model] li .normal
+div[data-tree-model] li i.normal
   padding-left gap
   background-image url("album.png")
   background-repeat no-repeat
-
-div[data-tree-model] li .selected
-  color primaryColor
-
 

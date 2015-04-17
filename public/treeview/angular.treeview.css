@@ -85,6 +85,18 @@
 .shift12_11 {
   padding-left: 880px;
 }
+div[data-tree-model] li {
+  position: relative;
+}
+div[data-tree-model] li.expanded::before {
+  content: '';
+  margin-left: 8px;
+  width: 1px;
+  position: absolute;
+  background: #dedede;
+  top: 24px;
+  bottom: 0;
+}
 div[data-tree-model] li span {
   cursor: pointer;
   min-width: 60px;
@@ -100,23 +112,23 @@ div[data-tree-model] li span {
   margin-bottom: 1.2rem;
   display: inline-block;
 }
-div[data-tree-model] li .expanded {
+div[data-tree-model] li span.selected {
+  color: #2196f3;
+}
+div[data-tree-model] li i.expanded {
   padding-left: 20px;
   background-image: url("folder.png");
   background-repeat: no-repeat;
   cursor: pointer;
 }
-div[data-tree-model] li .collapsed {
+div[data-tree-model] li i.collapsed {
   padding-left: 20px;
   background-image: url("folder-closed.png");
   background-repeat: no-repeat;
   cursor: pointer;
 }
-div[data-tree-model] li .normal {
+div[data-tree-model] li i.normal {
   padding-left: 20px;
   background-image: url("album.png");
   background-repeat: no-repeat;
-}
-div[data-tree-model] li .selected {
-  color: #2196f3;
 }

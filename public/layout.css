@@ -104,8 +104,6 @@ body {
   color: #212121;
   font-weight: 300;
   text-decoration: none;
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
   height: 100%;
   background: #dedede;
 }
@@ -183,8 +181,6 @@ body {
   color: #212121;
   font-weight: 300;
   text-decoration: none;
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
 }
 .primary-body-font {
   font-family: Verdana, Geneva, sans-serif;
@@ -195,8 +191,6 @@ body {
   color: #2196f3;
   font-weight: 300;
   text-decoration: none;
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
 }
 .button-font {
   font-family: Verdana, Geneva, sans-serif;
@@ -207,8 +201,6 @@ body {
   color: #212121;
   font-weight: 400;
   text-decoration: none;
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
   text-transform: uppercase;
 }
 .decorator {
@@ -275,8 +267,6 @@ li {
   color: #212121;
   font-weight: 400;
   text-decoration: none;
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
   text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -321,8 +311,6 @@ li {
   color: #fff;
   font-weight: 400;
   text-decoration: none;
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
   text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -367,8 +355,6 @@ li {
   color: #212121;
   font-weight: 400;
   text-decoration: none;
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
   text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -416,8 +402,6 @@ li {
   color: #212121;
   font-weight: 400;
   text-decoration: none;
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
   text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -465,8 +449,6 @@ li {
   color: #212121;
   font-weight: 400;
   text-decoration: none;
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
   text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -514,8 +496,6 @@ li {
   color: #212121;
   font-weight: 400;
   text-decoration: none;
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
   text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;

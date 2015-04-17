@@ -22,10 +22,12 @@
 
         var isLeaf = attrs.isLeaf || 'isLeaf';
 
+        var expandedExpr = "node.isLeaf || node.collapsed ? 'collapsed' : 'expanded'";
+
         //tree template
         var template =
           '<ul>' +
-          '<li data-ng-repeat="node in ' + treeModel + '">' +
+          '<li data-ng-repeat="node in ' + treeModel + '" data-ng-class="' + expandedExpr + '">' +
           '<i class="collapsed" data-ng-hide="node.' + isLeaf + ' || !node.collapsed" data-ng-click="' + treeId + '.selectNodeHead(node)"></i>' +
           '<i class="expanded" data-ng-hide="node.' + isLeaf + ' || node.collapsed" data-ng-click="' + treeId + '.selectNodeHead(node)"></i>' +
           '<i class="normal" data-ng-show="node.' + isLeaf + '"></i> ' +

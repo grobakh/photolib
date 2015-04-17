@@ -71,16 +71,22 @@
 
           if (node) {
             node.edit = true;
-            node.rename = function() {
-              if (!node.label) {
-                if (node.isLeaf) {
-                  node.label = $scope.newAlbumLabel + " #" + counter++;
-                } else {
-                  node.label = $scope.newFolderLabel + " #" + counter++;
-                }
+            node.rename = function ($event) {
+              if (!$event) {
+                delete node.edit;
+              } else if ($event.keyCode == 13) {
+                delete node.edit;
+              } else if ($event.keyCode == 27) {
+                //$event.target.$rollbackViewValue();
+                delete node.edit;
               }
-
-              delete node.edit;
+              //if (!node.label) {
+              //  if (node.isLeaf) {
+              //    node.label = $scope.newAlbumLabel + " #" + counter++;
+              //  } else {
+              //    node.label = $scope.newFolderLabel + " #" + counter++;
+              //  }
+              //}
             }
           }
         }

@@ -24,9 +24,14 @@
 
         var expandedExpr = "node.isLeaf || node.collapsed ? 'collapsed' : 'expanded'";
 
+        var modelOptions = "{ updateOn: 'blur' }";
+
         var switchTemplate = '<span ng-switch on="!!node.edit">' +
           '<input ng-switch-when="true" ng-model="node.label" ' +
-          'ng-blur="node.rename()" required ' +
+          'ng-model-options="' + modelOptions + '" ' +
+          'ng-blur="node.rename()"' +
+          'ng-keyup="node.rename($event)"' +
+          'required ' +
           '/>' +
           '<span class="label" ng-class="node.selected" ' +
           'ng-click="' + treeId + '.selectNodeLabel(node)" ' +

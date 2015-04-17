@@ -98,18 +98,23 @@ div[data-tree-model] li.expanded::before {
   bottom: 12px;
 }
 div[data-tree-model] li span.label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
   cursor: pointer;
   min-width: 60px;
   font-family: Verdana, Geneva, sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 24px;
-  line-height: 2.4rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 20px;
+  line-height: 2rem;
   color: #212121;
   font-weight: 300;
   text-decoration: none;
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
   display: inline-block;
 }
 div[data-tree-model] li span.label.selected {

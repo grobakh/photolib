@@ -48,6 +48,18 @@ body
   container()
   display inline-block
 
+input
+  body-font()
+  user-select-none()
+  border none
+  background-image: linear-gradient(primaryColor,primaryColor);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: transparent;
+  &.ng-invalid-required
+    background-image: linear-gradient(errorColor,errorColor);
+
 ul
   list-style-type none
   border none

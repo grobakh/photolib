@@ -5,7 +5,6 @@
 
   albumTreeApp.controller('treeController', ["$scope", "$http",
     function ($scope, $http) {
-
       function findParent(node, scope, mode, parentNode) {
         if (!scope) {
           return null;
@@ -70,10 +69,19 @@
         if ($scope.albums.currentNode) {
           var node = $scope.albums.currentNode;
 
-          if (!node.rename) {
-            node.rename = function () {
-              delete node.rename;
-            };
+          if (node) {
+            node.edit = true;
+            node.rename = function() {
+              if (!node.label) {
+                if (node.isLeaf) {
+                  node.label = $scope.newAlbumLabel + " #" + counter++;
+                } else {
+                  node.label = $scope.newFolderLabel + " #" + counter++;
+                }
+              }
+
+              delete node.edit;
+            }
           }
         }
       };
@@ -183,7 +191,7 @@
           var item = scope[i];
           delete item.selected;
           delete item.collapsed;
-          delete item.rename;
+          delete item.edit;
 
           if (item.children) {
             purify(item.children);

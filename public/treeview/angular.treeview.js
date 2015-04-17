@@ -24,24 +24,26 @@
 
         var expandedExpr = "node.isLeaf || node.collapsed ? 'collapsed' : 'expanded'";
 
-        var switchTemplate = '<span ng-switch on="!!node.rename">' +
-          '<input ng-switch-when="true" ng-model="node.label" ng-blur="node.rename()" />' +
-          '<span class="label" data-ng-class="node.selected" ' +
-          'data-ng-click="' + treeId + '.selectNodeLabel(node)" ' +
+        var switchTemplate = '<span ng-switch on="!!node.edit">' +
+          '<input ng-switch-when="true" ng-model="node.label" ' +
+          'ng-blur="node.rename()" required ' +
+          '/>' +
+          '<span class="label" ng-class="node.selected" ' +
+          'ng-click="' + treeId + '.selectNodeLabel(node)" ' +
           'ng-switch-default>{{node.' + nodeLabel + '}}</span>' +
           '</span>';
 
         //tree template
         var template =
           '<ul>' +
-          '<li data-ng-repeat="node in ' + treeModel + '" data-ng-class="' + expandedExpr + '">' +
-          '<i class="collapsed" data-ng-hide="node.' + isLeaf + ' || !node.collapsed" data-ng-click="' + treeId + '.selectNodeHead(node)"></i>' +
-          '<i class="expanded" data-ng-hide="node.' + isLeaf + ' || node.collapsed" data-ng-click="' + treeId + '.selectNodeHead(node)"></i>' +
-          '<i class="normal" data-ng-show="node.' + isLeaf + '"></i> ' +
+          '<li ng-repeat="node in ' + treeModel + '" ng-class="' + expandedExpr + '">' +
+          '<i class="collapsed" ng-hide="node.' + isLeaf + ' || !node.collapsed" ng-click="' + treeId + '.selectNodeHead(node)"></i>' +
+          '<i class="expanded" ng-hide="node.' + isLeaf + ' || node.collapsed" ng-click="' + treeId + '.selectNodeHead(node)"></i>' +
+          '<i class="normal" ng-show="node.' + isLeaf + '"></i> ' +
           switchTemplate +
-          '<div data-ng-hide="node.collapsed" data-tree-id="' + treeId + '" data-tree-model="node.' + nodeChildren
-          + '" data-node-id=' + nodeId + ' data-node-label=' + nodeLabel +
-          ' data-node-children=' + nodeChildren + '></div>' +
+          '<div ng-hide="node.collapsed" tree-id="' + treeId + '" tree-model="node.' + nodeChildren
+          + '" node-id=' + nodeId + ' node-label=' + nodeLabel +
+          ' node-children=' + nodeChildren + '></div>' +
           '</li>' +
           '</ul>';
 

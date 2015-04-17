@@ -95,7 +95,7 @@ div[data-tree-model] li.expanded::before {
   position: absolute;
   background: #dedede;
   top: 24px;
-  bottom: 0;
+  bottom: 12px;
 }
 div[data-tree-model] li span {
   cursor: pointer;

@@ -3,7 +3,8 @@
 
   albumTreeApp.controller('treeController', ["$scope", "$http",
     function ($scope, $http) {
-      function findParentScope(node, scope) {
+
+      function findParent(node, scope, mode, parentNode) {
         if (!scope) {
           return null;
         }
@@ -11,11 +12,12 @@
         var position = scope.indexOf(node);
 
         if (position > -1) {
-          return scope;
+          return mode === "node" ? parentNode : scope;
         }
 
         for (var i = scope.length; i--;) {
-          var candidate = findParentScope(node, scope[i].children);
+          var candidate = findParent(node, scope[i].children, mode, scope[i]);
+
           if (candidate != null) {
             return candidate;
           }
@@ -59,7 +61,7 @@
       $scope.remove = function () {
         if ($scope.albums.currentNode) {
           var node = $scope.albums.currentNode;
-          var parentScope = findParentScope($scope.albums.currentNode, $scope.albumTree);
+          var parentScope = findParent($scope.albums.currentNode, $scope.albumTree);
 
           if (parentScope) {
             parentScope.splice(parentScope.indexOf(node), 1);
@@ -71,7 +73,7 @@
       $scope.moveUp = function () {
         if ($scope.albums.currentNode) {
           var node = $scope.albums.currentNode;
-          var parentScope = findParentScope($scope.albums.currentNode, $scope.albumTree);
+          var parentScope = findParent($scope.albums.currentNode, $scope.albumTree);
 
           if (parentScope) {
             var oldIndex = parentScope.indexOf(node);
@@ -85,13 +87,56 @@
       $scope.moveDown = function () {
         if ($scope.albums.currentNode) {
           var node = $scope.albums.currentNode;
-          var parentScope = findParentScope($scope.albums.currentNode, $scope.albumTree);
+          var parentScope = findParent($scope.albums.currentNode, $scope.albumTree);
 
           if (parentScope) {
             var oldIndex = parentScope.indexOf(node);
-            var newIndex = oldIndex < parentScope.length - 1 ? oldIndex + 1 : oldIndex;
+            var newIndex = oldIndex < parentScope.length - 1 ? oldIndex + 1
+              : oldIndex;
             parentScope.splice(oldIndex, 1);
             parentScope.splice(newIndex, 0, node);
+          }
+        }
+      };
+
+      $scope.moveLeft = function () {
+        if ($scope.albums.currentNode) {
+          var node = $scope.albums.currentNode;
+          var parent = findParent($scope.albums.currentNode,
+            $scope.albumTree, "node");
+
+          if (parent) {
+            var grandScope = findParent(parent, $scope.albumTree);
+            var parentIndex = grandScope.indexOf(parent);
+            var parentScope = parent.children;
+            var oldIndex = parentScope.indexOf(node);
+            parentScope.splice(oldIndex, 1);
+            grandScope.splice(parentIndex + 1, 0, node);
+          }
+        }
+      };
+
+      $scope.moveRight = function () {
+        if ($scope.albums.currentNode) {
+          var node = $scope.albums.currentNode;
+          var parentScope = findParent(node, $scope.albumTree);
+
+          if (parentScope) {
+            var oldIndex = parentScope.indexOf(node);
+
+            if (oldIndex > 0) {
+              var newParentIndex = oldIndex - 1;
+              var newParent = parentScope[newParentIndex];
+
+              if (!newParent.isLeaf) {
+                newParent.children = newParent.children || [];
+                newParent.collapsed = false;
+                var newParentScope = newParent.children;
+
+                parentScope.splice(oldIndex, 1);
+                newParentScope.splice(newParentScope.length, 0, node);
+              }
+            }
           }
         }
       };

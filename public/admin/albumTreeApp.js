@@ -42,63 +42,47 @@
         return null;
       }
 
-      $scope.addFolder = function () {
+      function add(newNode) {
         var selectedChildren = $scope.albumTree;
         var node = $scope.albums.currentNode;
+        var position = selectedChildren.length;
 
         if (node) {
           if (!node.isLeaf) {
             node.children = node.children || [];
             selectedChildren = node.children;
+            position =selectedChildren.length;
           } else {
             var parent = findParent(node, $scope.albumTree, "node");
             if (parent) {
               selectedChildren = parent.children;
+              position = parent.children.indexOf(node) + 1;
+            } else {
+              position = $scope.albumTree.indexOf(node) + 1;
             }
           }
           node.collapsed = false;
           node.selected = false;
         }
 
-        var newNode = {
-          label: $scope.newFolderLabel + " #" + counter++,
-          isLeaf: false
-        };
-        selectedChildren.push(newNode);
+        selectedChildren.splice(position, 0, newNode);
         newNode.selected = 'selected';
         newNode.collapsed = false;
         $scope.albums.currentNode = newNode;
+      }
 
+      $scope.addFolder = function () {
+        add({
+          label: $scope.newFolderLabel + " #" + counter++,
+          isLeaf: false
+        });
       };
 
       $scope.addAlbum = function () {
-        var selectedChildren = $scope.albumTree;
-        var node = $scope.albums.currentNode;
-
-        if (node) {
-          if (!node.isLeaf) {
-            node.children = node.children || [];
-            selectedChildren = node.children;
-          } else {
-            var parent = findParent(node, $scope.albumTree, "node");
-            if (parent) {
-              selectedChildren = parent.children;
-            }
-          }
-
-          node.collapsed = false;
-          node.selected = false;
-        }
-
-        var newNode = {
+        add({
           label: $scope.newAlbumLabel + " #" + counter++,
           isLeaf: true
-        };
-
-        selectedChildren.push(newNode);
-        newNode.selected = 'selected';
-        newNode.collapsed = false;
-        $scope.albums.currentNode = newNode;
+        });
       };
 
       $scope.rename = function () {

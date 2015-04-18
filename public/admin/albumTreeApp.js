@@ -3,6 +3,21 @@
 
   var counter = 1;
 
+  albumTreeApp.directive('focusMe', function ($timeout) {
+    return {
+      scope: {trigger: '@focusMe'},
+      link: function (scope, element) {
+        scope.$watch('trigger', function (value) {
+          if (value === "true") {
+            $timeout(function () {
+              element[0].select();
+            });
+          }
+        });
+      }
+    };
+  });
+
   albumTreeApp.controller('treeController', ["$scope", "$http",
     function ($scope, $http) {
       function findParent(node, scope, mode, parentNode) {
@@ -73,12 +88,12 @@
             node.edit = true;
             node.rename = function ($event) {
               if (!$event) {
-                delete node.edit;
+                node.edit = false;
               } else if ($event.keyCode == 13) {
-                delete node.edit;
+                node.edit = false;
               } else if ($event.keyCode == 27) {
                 //$event.target.$rollbackViewValue();
-                delete node.edit;
+                node.edit = false;
               }
               //if (!node.label) {
               //  if (node.isLeaf) {

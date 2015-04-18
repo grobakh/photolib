@@ -26,9 +26,9 @@ block content
     ng-init="albumTree=#{JSON.stringify(albumTree)}; newAlbumLabel='#{newAlbumLabel}'; newFolderLabel='#{newFolderLabel}'")
     .grid12_4
       div
-        button.flat-button(ng-disabled="albums.currentNode.isLeaf" ng-click="addAlbum()")= __("addAlbum")
+        button.flat-button(ng-click="addAlbum()")= __("addAlbum")
       div
-        button.flat-button(ng-disabled="albums.currentNode.isLeaf" ng-click="addFolder()")= __("addFolder")
+        button.flat-button(ng-click="addFolder()")= __("addFolder")
       div
         button.flat-button(ng-disabled="!albums.currentNode" ng-click="rename()")= __("rename")
       div

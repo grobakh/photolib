@@ -46,11 +46,18 @@
         var selectedChildren = $scope.albumTree;
         var node = $scope.albums.currentNode;
 
-        if (node && !node.isLeaf) {
-          node.children = node.children || [];
+        if (node) {
+          if (!node.isLeaf) {
+            node.children = node.children || [];
+            selectedChildren = node.children;
+          } else {
+            var parent = findParent(node, $scope.albumTree, "node");
+            if (parent) {
+              selectedChildren = parent.children;
+            }
+          }
           node.collapsed = false;
           node.selected = false;
-          selectedChildren = node.children;
         }
 
         var newNode = {
@@ -68,16 +75,30 @@
         var selectedChildren = $scope.albumTree;
         var node = $scope.albums.currentNode;
 
-        if (node && !node.isLeaf) {
-          node.children = node.children || [];
+        if (node) {
+          if (!node.isLeaf) {
+            node.children = node.children || [];
+            selectedChildren = node.children;
+          } else {
+            var parent = findParent(node, $scope.albumTree, "node");
+            if (parent) {
+              selectedChildren = parent.children;
+            }
+          }
+
           node.collapsed = false;
-          selectedChildren = node.children;
+          node.selected = false;
         }
 
-        selectedChildren.push({
+        var newNode = {
           label: $scope.newAlbumLabel + " #" + counter++,
           isLeaf: true
-        });
+        };
+
+        selectedChildren.push(newNode);
+        newNode.selected = 'selected';
+        newNode.collapsed = false;
+        $scope.albums.currentNode = newNode;
       };
 
       $scope.rename = function () {

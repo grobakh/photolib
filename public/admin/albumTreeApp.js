@@ -51,7 +51,7 @@
           if (!node.isLeaf) {
             node.children = node.children || [];
             selectedChildren = node.children;
-            position =selectedChildren.length;
+            position = selectedChildren.length;
           } else {
             var parent = findParent(node, $scope.albumTree, "node");
             if (parent) {
@@ -91,22 +91,16 @@
 
           if (node) {
             node.edit = true;
+            node.oldLabel = node.label;
             node.rename = function ($event) {
-              if (!$event) {
-                node.edit = false;
-              } else if ($event.keyCode == 13) {
-                node.edit = false;
-              } else if ($event.keyCode == 27) {
-                //$event.target.$rollbackViewValue();
+              if (!$event || $event.keyCode == 13 || $event.keyCode == 27) {
+
+                if ($event.keyCode == 27 || !node.label) {
+                  node.label = node.oldLabel;
+                }
+
                 node.edit = false;
               }
-              //if (!node.label) {
-              //  if (node.isLeaf) {
-              //    node.label = $scope.newAlbumLabel + " #" + counter++;
-              //  } else {
-              //    node.label = $scope.newFolderLabel + " #" + counter++;
-              //  }
-              //}
             }
           }
         }
@@ -218,6 +212,7 @@
           delete item.selected;
           delete item.collapsed;
           delete item.edit;
+          delete item.oldLabel;
 
           if (item.children) {
             purify(item.children);

@@ -202,24 +202,32 @@
           if ($event.keyCode === 38) {
             if ($event.ctrlKey) {
               $scope.moveUp();
+            } else {
+              $scope.selectUp();
             }
           }
 
           if ($event.keyCode === 40) {
             if ($event.ctrlKey) {
               $scope.moveDown();
+            } else {
+              $scope.selectDown();
             }
           }
 
           if ($event.keyCode === 37) {
             if ($event.ctrlKey) {
               $scope.moveLeft();
+            } else {
+              $scope.selectLeft();
             }
           }
 
           if ($event.keyCode === 39) {
             if ($event.ctrlKey) {
               $scope.moveRight();
+            } else {
+              $scope.selectRight();
             }
           }
 

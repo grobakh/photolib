@@ -4,12 +4,26 @@
       "_id": "albums",
       "tree": [
         {
-          "_id": "1",
-          "label": "bar"
+          "label": "bar",
+          "id" : "11k1yi7tcg6",
+          "children": [
+            {
+              "label": "Новая папка #1",
+              "id" : "2kp36zo3mo6",
+              "isLeaf": false,
+              "children": [
+                {
+                  "label": "Новый альбом #2",
+                  "id" : "1v3grha41ly",
+                  "isLeaf": true
+                }
+              ]
+            }
+          ]
         },
         {
-          "_id": "2",
           "label": "foo",
+          "id" : "gvnzto7lpy",
           "isLeaf": true
         }
       ]

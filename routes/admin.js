@@ -17,7 +17,7 @@ router.get('/manageAlbums', function (req, res) {
 });
 
 router.post('/manageAlbums/saveChanges', function (req, res) {
-  var albumTree = req.param('albumTree');
+  var albumTree = req.body.albumTree;
   albumsDb.saveTree(albumTree, function (err) {
     throw new Error(err);
   }, function (rev, oldTree, newTree) {
@@ -29,14 +29,14 @@ router.post('/manageAlbums/saveChanges', function (req, res) {
 router.get('/manageAlbums/success', function (req, res) {
   res.render('admin-manageAlbums-success', {
     title: res.__("manageAlbums"),
-    albumsRemoved: req.param('albumsRemoved'),
-    photosRecovery: req.param('photosRecovery'),
-    rev: req.param('rev')
+    albumsRemoved: req.query.albumsRemoved,
+    photosRecovery: req.query.photosRecovery,
+    rev: req.query.rev
   });
 });
 
 router.get('/manageAlbums/cancel/:rev', function (req, res) {
-  albumsDb.undo(req.param('rev'), function (err) {
+  albumsDb.undo(req.params.rev, function (err) {
     if (err === "PL_CANCEL_NOT_LATEST_REVISION") {
       res.redirect('/admin/manageAlbums/cannotCancel');
     }

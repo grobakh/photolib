@@ -1,14 +1,12 @@
 extends layout
 
 block content
+
   .catalog.grid12_12
     ul
-      li
-        a.subhead-font Фото по поездкам
-      li
-        a.subhead-font Избранные фото Люды
-      li
-        a.subhead-font Избранные фото Вовы
+      each val in albumTree
+        li
+          a(href="/photos/#{val.id}").subhead-font=val.label
 
 block footer
   .footer.grid12_12

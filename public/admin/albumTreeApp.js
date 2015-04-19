@@ -1,8 +1,6 @@
 (function () {
   var albumTreeApp = angular.module('albumTreeApp', ['angularTreeview']);
 
-  var counter = 1;
-
   albumTreeApp.directive('focusMe', function ($timeout) {
     return {
       scope: {trigger: '@focusMe'},
@@ -72,16 +70,20 @@
       }
 
       $scope.addFolder = function () {
+        var id = uuid();
         add({
-          label: $scope.newFolderLabel + " #" + counter++,
-          isLeaf: false
+          label: $scope.newFolderLabel + " #" + id,
+          isLeaf: false,
+          id: id
         });
       };
 
       $scope.addAlbum = function () {
+        var id = uuid();
         add({
-          label: $scope.newAlbumLabel + " #" + counter++,
-          isLeaf: true
+          label: $scope.newAlbumLabel + " #" + id,
+          isLeaf: true,
+          id: id
         });
       };
 

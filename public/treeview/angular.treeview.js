@@ -24,7 +24,8 @@
 
         var expandedExpr = "node.isLeaf || node.collapsed ? 'collapsed' : 'expanded'";
 
-        var switchTemplate = '<span ng-switch on="!!node.edit">' +
+        var switchTemplate = '<span ng-switch on="!!node.edit" ' +
+          'yf-drop on-drop="node.onDrop(dragId)" >' +
           '<input ng-switch-when="true" ng-model="node.label" ' +
           'ng-blur="node.rename()" ' +
           'ng-keyup="node.rename($event)" ' +
@@ -33,6 +34,7 @@
           '/>' +
           '<span class="label" ng-class="node.selected" ' +
           'ng-click="' + treeId + '.selectNodeLabel(node)" ' +
+          'yf-drag drag-id="node.id" ' +
           'ng-switch-default>{{node.' + nodeLabel + '}}</span>' +
           '</span>';
 

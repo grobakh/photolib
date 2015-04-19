@@ -1,22 +1,24 @@
 @import "../mixins"
 
-div[data-tree-model] li
-  position relative
-  &.expanded::before
-    content ''
-    margin-left 8px
-    width 1px
-    position absolute
-    background desktopColor
-    top 24px
-    bottom 12px
-  span.label
-    user-select-none()
-    cursor pointer
-    min-width unit
-    body-font()
-    &.selected
-      color primaryColor
+div[data-tree-model]
+  user-select-none()
+  li
+    position relative
+    &.expanded::before
+      content ''
+      margin-left 8px
+      width 1px
+      position absolute
+      background desktopColor
+      top 24px
+      bottom 12px
+    span.label
+      user-select-none()
+      cursor pointer
+      min-width unit
+      body-font()
+      &.selected
+        color primaryColor
 
 div[data-tree-model] li i.expanded
   padding-left gap

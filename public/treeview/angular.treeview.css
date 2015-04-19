@@ -85,6 +85,13 @@
 .shift12_11 {
   padding-left: 880px;
 }
+div[data-tree-model] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+}
 div[data-tree-model] li {
   position: relative;
 }

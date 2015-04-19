@@ -7,8 +7,9 @@ block scripts
   script(type="text/javascript" src="/core/angular.min.js")
   script(type="text/javascript" src="/core/underscore.min.js")
   script(type="text/javascript" src="/core/underscore.mixins.js")
+  script(type="text/javascript" src="/core/uuid.js")
+  script(type="text/javascript" src="/core/dragdrop.js")
   script(type="text/javascript" src="/treeview/angular.treeview.js")
-  script(type="text/javascript" src="/admin/uuid.js")
   script(type="text/javascript" src="/admin/albumTreeApp.js")
 
 block favicon
@@ -24,7 +25,9 @@ block content
   - var newAlbumLabel = __("newAlbum")
 
   div(ng-app="albumTreeApp"): div(ng-controller="treeController"
-    ng-init="albumTree=#{JSON.stringify(albumTree)}; newAlbumLabel='#{newAlbumLabel}'; newFolderLabel='#{newFolderLabel}'")
+    ng-init="load(#{JSON.stringify(albumTree)});" +
+            "newAlbumLabel='#{newAlbumLabel}';" +
+            "newFolderLabel='#{newFolderLabel}';")
     .grid12_4
       div
         button.flat-button(ng-click="addAlbum()")= __("addAlbum")
@@ -44,4 +47,7 @@ block content
         a.flat-button(href="/admin")= __("cancel")
 
     .grid12_8
-        div(data-angular-treeview="true" data-tree-id="albums" data-tree-model="albumTree")
+        div(data-angular-treeview="true"
+        data-tree-id="albums"
+        data-tree-model="albumTree"
+        ng-keyup="onKeyUp($event)" tabIndex=0)

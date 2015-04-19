@@ -1,5 +1,6 @@
 (function () {
-  var albumTreeApp = angular.module('albumTreeApp', ['angularTreeview']);
+  var albumTreeApp = angular.module('albumTreeApp',
+    ['angularTreeview', 'yf.services', 'yf.dragdrop']);
 
   albumTreeApp.directive('focusMe', function ($timeout) {
     return {
@@ -16,8 +17,31 @@
     };
   });
 
-  albumTreeApp.controller('treeController', ["$scope", "$http",
-    function ($scope, $http) {
+  albumTreeApp.controller('treeController', ["$scope", "$http", "neatUid",
+    function ($scope, $http, neatUid) {
+
+      function findNode(nodeId, scope) {
+        if (!scope) {
+          return null;
+        }
+
+        for (var i = scope.length; i--;) {
+          var node = scope[i];
+
+          if (node.id === nodeId) {
+            return node;
+          }
+
+          var candidate = findNode(nodeId, node.children);
+
+          if (candidate) {
+            return candidate;
+          }
+        }
+
+        return null;
+      }
+
       function findParent(node, scope, mode, parentNode) {
         if (!scope) {
           return null;
@@ -32,7 +56,7 @@
         for (var i = scope.length; i--;) {
           var candidate = findParent(node, scope[i].children, mode, scope[i]);
 
-          if (candidate != null) {
+          if (candidate) {
             return candidate;
           }
         }
@@ -40,17 +64,63 @@
         return null;
       }
 
-      function add(newNode) {
+      function augmentNode(node) {
+        node.onDrop = function (dragId) {
+          var source = findNode(dragId, $scope.albumTree);
+          var oldParentScope = findParent(source, $scope.albumTree);
+          var oldPosition = oldParentScope.indexOf(source);
+          var newParentScope;
+          var newPosition;
+
+          if (node.isLeaf) {
+            newParentScope = findParent(node, $scope.albumTree);
+            newPosition = newParentScope.indexOf(node) + 1;
+          } else {
+            node.children = node.children || [];
+            newParentScope = node.children;
+            newPosition = node.children.length;
+          }
+
+          oldParentScope.splice(oldPosition, 1);
+          newParentScope.splice(newPosition, 0, source);
+
+          var oldSelection = $scope.albums.currentNode;
+
+          if (oldSelection) {
+            oldSelection.selected = false;
+          }
+
+          source.selected = 'selected';
+          $scope.albums.currentNode = source;
+
+          $scope.$apply();
+        };
+      }
+
+      $scope.load = function (data) {
+        function inject(scope) {
+          for (var i = scope.length; i--;) {
+            var node = scope[i];
+
+            augmentNode(node);
+
+            if (node.children) {
+              inject(node.children);
+            }
+          }
+        }
+
+        inject(data);
+        $scope.albumTree = data;
+      };
+
+      function addNode(newNode) {
         var selectedChildren = $scope.albumTree;
         var node = $scope.albums.currentNode;
         var position = selectedChildren.length;
 
         if (node) {
-          if (!node.isLeaf) {
-            node.children = node.children || [];
-            selectedChildren = node.children;
-            position = selectedChildren.length;
-          } else {
+          if (node.isLeaf) {
             var parent = findParent(node, $scope.albumTree, "node");
             if (parent) {
               selectedChildren = parent.children;
@@ -58,20 +128,26 @@
             } else {
               position = $scope.albumTree.indexOf(node) + 1;
             }
+          } else {
+            node.children = node.children || [];
+            selectedChildren = node.children;
+            position = selectedChildren.length;
           }
+
           node.collapsed = false;
           node.selected = false;
         }
 
         selectedChildren.splice(position, 0, newNode);
+        augmentNode(newNode);
         newNode.selected = 'selected';
         newNode.collapsed = false;
         $scope.albums.currentNode = newNode;
       }
 
       $scope.addFolder = function () {
-        var id = uuid();
-        add({
+        var id = neatUid.new();
+        addNode({
           label: $scope.newFolderLabel + " #" + id,
           isLeaf: false,
           id: id
@@ -79,8 +155,8 @@
       };
 
       $scope.addAlbum = function () {
-        var id = uuid();
-        add({
+        var id = neatUid.new();
+        addNode({
           label: $scope.newAlbumLabel + " #" + id,
           isLeaf: true,
           id: id
@@ -90,21 +166,65 @@
       $scope.rename = function () {
         if ($scope.albums.currentNode) {
           var node = $scope.albums.currentNode;
+          var enterCode = 13;
+          var escapeCode = 27;
 
           if (node) {
             node.edit = true;
             node.oldLabel = node.label;
             node.rename = function ($event) {
-              if (!$event || $event.keyCode == 13 || $event.keyCode == 27) {
+              if (!$event || $event.keyCode == enterCode
+                || $event.keyCode == escapeCode) {
 
-                if ($event.keyCode == 27 || !node.label) {
+                if (($event && $event.keyCode == escapeCode) || !node.label) {
                   node.label = node.oldLabel;
                 }
-
                 node.edit = false;
               }
+
+              $event.preventDefault();
+              $event.stopPropagation();
             }
           }
+        }
+      };
+
+      $scope.onKeyUp = function($event) {
+        if ($event) {
+          if ($event.keyCode === 13 || $event.keyCode === 113) {
+            $scope.rename();
+          }
+
+          if ($event.keyCode === 46 && $event.shiftKey) {
+            $scope.remove();
+          }
+
+          if ($event.keyCode === 38) {
+            if ($event.ctrlKey) {
+              $scope.moveUp();
+            }
+          }
+
+          if ($event.keyCode === 40) {
+            if ($event.ctrlKey) {
+              $scope.moveDown();
+            }
+          }
+
+          if ($event.keyCode === 37) {
+            if ($event.ctrlKey) {
+              $scope.moveLeft();
+            }
+          }
+
+          if ($event.keyCode === 39) {
+            if ($event.ctrlKey) {
+              $scope.moveRight();
+            }
+          }
+
+          $event.preventDefault();
+          $event.stopPropagation();
         }
       };
 
@@ -215,6 +335,8 @@
           delete item.collapsed;
           delete item.edit;
           delete item.oldLabel;
+          delete item.onDrop;
+          delete item.onKey;
 
           if (item.children) {
             purify(item.children);
@@ -231,7 +353,7 @@
             var paramStr = _.getURIparams(data);
             window.location = ("/admin/manageAlbums/success?" + paramStr);
           }).
-          error(function (data, status, headers, config) {
+          error(function (data) {
             alert(data);
           });
       };

@@ -4,14 +4,12 @@
 
   albumTreeApp.directive('focusMe', function ($timeout) {
     return {
-      scope: {trigger: '@focusMe'},
-      link: function (scope, element) {
-        scope.$watch('trigger', function (value) {
-          if (value === "true") {
-            $timeout(function () {
-              element[0].select();
-            });
-          }
+      link: function (scope, element, attrs) {
+        attrs.$observe('focusMe', function (value) {
+          $timeout(function () {
+            element[0].focus();
+            element[0].select();
+          });
         });
       }
     };
@@ -163,6 +161,8 @@
         });
       };
 
+      $scope.focusTree = 0;
+
       $scope.rename = function () {
         if ($scope.albums.currentNode) {
           var node = $scope.albums.currentNode;
@@ -179,11 +179,16 @@
                 if (($event && $event.keyCode == escapeCode) || !node.label) {
                   node.label = node.oldLabel;
                 }
-                node.edit = false;
-              }
 
-              $event.preventDefault();
-              $event.stopPropagation();
+                node.edit = false;
+
+                $event.preventDefault();
+                $event.stopPropagation();
+
+                $scope.focusTree++;
+
+                return false;
+              }
             }
           }
         }
@@ -197,6 +202,14 @@
 
           if ($event.keyCode === 46 && $event.shiftKey) {
             $scope.remove();
+          }
+
+          if ($event.keyCode === 45) {
+            if ($event.shiftKey) {
+              $scope.addFolder();
+            } else {
+              $scope.addAlbum();
+            }
           }
 
           if ($event.keyCode === 38) {

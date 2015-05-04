@@ -29,7 +29,7 @@
           '<input ng-switch-when="true" ng-model="node.label" ' +
           'ng-blur="node.rename()" ' +
           'ng-keyup="node.rename($event)" ' +
-          'focus-me="{{node.edit}}" ' +
+          'focus-me="node.edit" ' +
           'required ' +
           '/>' +
           '<span class="label" ng-class="node.selected" ' +

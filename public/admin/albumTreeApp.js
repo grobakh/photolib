@@ -189,7 +189,7 @@
         }
       };
 
-      $scope.onKeyUp = function($event) {
+      $scope.onKeyUp = function ($event) {
         if ($event) {
           if ($event.keyCode === 13 || $event.keyCode === 113) {
             $scope.rename();
@@ -328,6 +328,77 @@
                 newParentScope.splice(newParentScope.length, 0, node);
               }
             }
+          }
+        }
+      };
+
+      $scope.selectUp = function () {
+        if ($scope.albums.currentNode) {
+          var node = $scope.albums.currentNode;
+          var parentScope = findParent($scope.albums.currentNode, $scope.albumTree);
+
+          if (parentScope) {
+            var oldIndex = parentScope.indexOf(node);
+
+            if (oldIndex !== 0) {
+              var newIndex = oldIndex - 1;
+              var newNode = parentScope[newIndex];
+
+              node.selected = false;
+              newNode.selected = 'selected';
+              $scope.albums.currentNode = newNode;
+            }
+          }
+        }
+      };
+
+      $scope.selectDown = function () {
+        if ($scope.albums.currentNode) {
+          var node = $scope.albums.currentNode;
+
+          var parentScope = findParent($scope.albums.currentNode, $scope.albumTree);
+
+          if (parentScope) {
+            var oldIndex = parentScope.indexOf(node);
+
+            if (oldIndex != parentScope.length - 1) {
+              var newIndex = oldIndex + 1;
+              var newNode = parentScope[newIndex];
+
+              node.selected = false;
+              newNode.selected = 'selected';
+              $scope.albums.currentNode = newNode;
+            }
+          }
+        }
+      };
+
+      $scope.selectLeft = function () {
+        if ($scope.albums.currentNode) {
+          var node = $scope.albums.currentNode;
+          var parent = findParent($scope.albums.currentNode,
+            $scope.albumTree, "node");
+
+          if (parent) {
+            var newNode = parent;
+            node.selected = false;
+            newNode.selected = 'selected';
+            $scope.albums.currentNode = newNode;
+          }
+        }
+      };
+
+      $scope.selectRight = function () {
+        if ($scope.albums.currentNode) {
+          var node = $scope.albums.currentNode;
+
+          if (node.children && node.children.length > 0) {
+
+            var newNode = node.children[0];
+            node.collapsed = false;
+            node.selected = false;
+            newNode.selected = 'selected';
+            $scope.albums.currentNode = newNode;
           }
         }
       };

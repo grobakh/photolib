@@ -11,8 +11,9 @@ block navigator
 block content
   .grid12_12
     div= __("saveChangesSuccessful")
-    div= __("saveChangesInfo", albumsRemoved, photosRecovery)
+    if (photosRecovery > 0)
+      div= __("saveChangesInfo", albumsRemoved, photosRecovery)
     div
       a.primary-body-font(href="/admin/manageAlbums/cancel/#{rev}")= __("cancelQuestion")
-    div.subheader
-      a.subhead-font(href="/admin/manageAlbums")= __("continueManageAlbums")
+    div
+      a.flat-button(href="/admin/manageAlbums")= __("continueManageAlbums")

@@ -210,6 +210,8 @@ body {
   color: #212121;
   font-weight: 400;
   text-decoration: none;
+  letter-spacing: 0.1px;
+  letter-spacing: 0.01rem;
   text-transform: uppercase;
 }
 .decorator {
@@ -282,8 +284,7 @@ li {
   margin-bottom: 14px;
   margin-bottom: 1.4rem;
   display: inline-block;
-  padding-left: 8px;
-  padding-right: 8px;
+  margin-left: 8px;
 }
 .crump::after {
   content: " ›";
@@ -300,6 +301,8 @@ li {
   color: #212121;
   font-weight: 400;
   text-decoration: none;
+  letter-spacing: 0.1px;
+  letter-spacing: 0.01rem;
   text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -318,7 +321,8 @@ li {
   line-height: 36px;
   padding-left: 8px;
   padding-right: 8px;
-  margin-right: 10px;
+  margin-left: -8px;
+  margin-right: 11px;
   transition-duration: 100ms;
   min-width: 60px;
   background: #fff;
@@ -343,6 +347,8 @@ li {
   color: #fff;
   font-weight: 400;
   text-decoration: none;
+  letter-spacing: 0.1px;
+  letter-spacing: 0.01rem;
   text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -361,10 +367,12 @@ li {
   line-height: 36px;
   padding-left: 8px;
   padding-right: 8px;
-  margin-right: 10px;
+  margin-left: -8px;
+  margin-right: 11px;
   transition-duration: 100ms;
   min-width: 60px;
   background: #2196f3;
+  margin-left: 0;
 }
 .primary-button:hover {
   background: #0d89ec;
@@ -386,6 +394,8 @@ li {
   color: #212121;
   font-weight: 400;
   text-decoration: none;
+  letter-spacing: 0.1px;
+  letter-spacing: 0.01rem;
   text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -404,7 +414,8 @@ li {
   line-height: 36px;
   padding-left: 8px;
   padding-right: 8px;
-  margin-right: 10px;
+  margin-left: -8px;
+  margin-right: 11px;
   transition-duration: 100ms;
   background: #fff;
   width: 36px;
@@ -432,6 +443,8 @@ li {
   color: #212121;
   font-weight: 400;
   text-decoration: none;
+  letter-spacing: 0.1px;
+  letter-spacing: 0.01rem;
   text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -450,7 +463,8 @@ li {
   line-height: 36px;
   padding-left: 8px;
   padding-right: 8px;
-  margin-right: 10px;
+  margin-left: -8px;
+  margin-right: 11px;
   transition-duration: 100ms;
   background: #fff;
   width: 36px;
@@ -478,6 +492,8 @@ li {
   color: #212121;
   font-weight: 400;
   text-decoration: none;
+  letter-spacing: 0.1px;
+  letter-spacing: 0.01rem;
   text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -496,7 +512,8 @@ li {
   line-height: 36px;
   padding-left: 8px;
   padding-right: 8px;
-  margin-right: 10px;
+  margin-left: -8px;
+  margin-right: 11px;
   transition-duration: 100ms;
   background: #fff;
   width: 36px;
@@ -524,6 +541,8 @@ li {
   color: #212121;
   font-weight: 400;
   text-decoration: none;
+  letter-spacing: 0.1px;
+  letter-spacing: 0.01rem;
   text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -542,7 +561,8 @@ li {
   line-height: 36px;
   padding-left: 8px;
   padding-right: 8px;
-  margin-right: 10px;
+  margin-left: -8px;
+  margin-right: 11px;
   transition-duration: 100ms;
   background: #fff;
   width: 36px;
